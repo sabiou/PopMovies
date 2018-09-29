@@ -59,4 +59,6 @@ dependencies {
 
     // Lifecycle components
     implementation "android.arch.lifecycle:runtime:$lifecycle_version"
+    implementation "android.arch.lifecycle:viewmodel:$lifecycle_version"
+    implementation "android.arch.lifecycle:extensions:$lifecycle_version"
 }

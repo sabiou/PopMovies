@@ -44,6 +44,11 @@
             android:authorities="xyz.godi.popularmovies.com.squareup.picasso"
             android:exported="false" />
         <provider
+            android:name="android.arch.lifecycle.ProcessLifecycleOwnerInitializer"
+            android:authorities="xyz.godi.popularmovies.lifecycle-trojan"
+            android:exported="false"
+            android:multiprocess="true" />
+        <provider
             android:name="com.android.tools.ir.server.InstantRunContentProvider"
             android:authorities="xyz.godi.popularmovies.com.android.tools.ir.server.InstantRunContentProvider"
             android:multiprocess="true" />

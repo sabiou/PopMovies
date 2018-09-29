@@ -1,5 +1,6 @@
 package xyz.godi.popularmovies.data;
 
+import android.arch.lifecycle.LiveData;
 import android.arch.persistence.room.Dao;
 import android.arch.persistence.room.Delete;
 import android.arch.persistence.room.Insert;
@@ -16,7 +17,7 @@ public interface MovieDAO {
 
     // get all movies
     @Query("SELECT * FROM Movie")
-    List<Movie> getAll();
+    LiveData<List<Movie>> getAll();
 
     // insert movie into the database
     @Insert(onConflict = OnConflictStrategy.REPLACE)

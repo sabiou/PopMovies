@@ -1,5 +1,8 @@
 package xyz.godi.popularmovies.ui;
 
+import android.arch.lifecycle.Observer;
+import android.arch.lifecycle.ViewModelProvider;
+import android.arch.lifecycle.ViewModelProviders;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -9,6 +12,7 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.annotation.Nullable;
 import android.support.design.widget.Snackbar;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AlertDialog;
@@ -38,6 +42,7 @@ import xyz.godi.popularmovies.api.ApiResponse;
 import xyz.godi.popularmovies.api.RetrofitClient;
 import xyz.godi.popularmovies.api.Service;
 import xyz.godi.popularmovies.data.MovieDataBase;
+import xyz.godi.popularmovies.data.MovieViewModel;
 import xyz.godi.popularmovies.model.Movie;
 import xyz.godi.popularmovies.ui.adapters.MovieAdapter;
 import xyz.godi.popularmovies.utils.Config;
@@ -51,8 +56,7 @@ public class MainActivity extends AppCompatActivity {
     SharedPreferences mSharedPref;
 
     private MovieAdapter movieAdapter;
-    private MovieDataBase movieDatabase;
-    private Executor executor;
+    private MovieViewModel movieViewModel;
 
     // Bind views using ButterKnife
     @BindView(R.id.mainLayout) FrameLayout homeLayout;
@@ -73,10 +77,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
-        // instanciate the Executor
-        executor = new MovieExec();
-        // instaciate database
-        movieDatabase = MovieDataBase.getDatabase(this);
+        // get viewModel from ViewModelProviders class
+        movieViewModel = ViewModelProviders.of(this).get(MovieViewModel.class);
 
         // set layout manager
         movie_recycler.setLayoutManager(new GridLayoutManager(this, getSpanCount()));
@@ -173,11 +175,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void loadFavorites() {
-        // run operation in a background thread
-        executor.execute(new Runnable() {
+        movieViewModel.getAllMovies().observe(this, new Observer<List<Movie>>() {
             @Override
-            public void run() {
-                List<Movie> movies = movieDatabase.movieDAO().getAll();
+            public void onChanged(@Nullable List<Movie> movies) {
+                // update from cahed data
                 movie_recycler.setAdapter(new MovieAdapter(getApplicationContext(),movies));
             }
         });

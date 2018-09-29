@@ -43,6 +43,11 @@
             android:name="com.squareup.picasso.PicassoProvider"
             android:authorities="xyz.godi.popularmovies.com.squareup.picasso"
             android:exported="false" />
+        <provider
+            android:name="android.arch.lifecycle.ProcessLifecycleOwnerInitializer"
+            android:authorities="xyz.godi.popularmovies.lifecycle-trojan"
+            android:exported="false"
+            android:multiprocess="true" />
     </application>
 
 </manifest>

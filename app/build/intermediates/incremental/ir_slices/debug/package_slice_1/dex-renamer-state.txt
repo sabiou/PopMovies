@@ -1,4 +1,4 @@
-#Sat Sep 29 03:23:58 WAT 2018
+#Sat Sep 29 05:37:59 WAT 2018
 base.0=/home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/build/intermediates/transforms/dexMerger/debug/2
 path.0=classes.dex
 renamed.0=classes.dex

@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.CoordinatorLayout;
@@ -52,10 +53,36 @@ import xyz.godi.popularmovies.utils.MovieExec;
 
 public class DetailsActivity extends AppCompatActivity {
 
+    public static final String TAG = DetailsActivity.class.getSimpleName();
     // Sharing TAG
     private static final String SHARE_TAG = "#PopularMovieByFarouk";
-    public static final String TAG = DetailsActivity.class.getSimpleName();
-
+    // Bind views using ButterKnife
+    @BindView(R.id.details_colapsingToolbar)
+    CollapsingToolbarLayout toolbarLayout;
+    @BindView(R.id.toolbar)
+    Toolbar toolbar;
+    @BindView(R.id.coordinatorLayout)
+    CoordinatorLayout coordinatorLayout;
+    @BindView(R.id.details_appBar)
+    AppBarLayout appBarLayout;
+    @BindView(R.id.headerImage)
+    ImageView movieHeaderImage;
+    @BindView(R.id.tv_original_title)
+    TextView movieTitle;
+    @BindView(R.id.date_tv)
+    TextView release_date;
+    @BindView(R.id.vote_tv)
+    TextView vote_count;
+    @BindView(R.id.description_content)
+    TextView movie_description;
+    @BindView(R.id.stars_rb)
+    RatingBar ratingBar;
+    @BindView(R.id.trailer_recycler)
+    RecyclerView trailerView;
+    @BindView(R.id.review_recycler)
+    RecyclerView reviewsRecycler;
+    @BindView(R.id.favoriteButton)
+    FloatingActionButton favouriteButton;
     // our Movie object
     private Movie movie;
     private TrailerAdapter trailerAdapter;
@@ -64,23 +91,8 @@ public class DetailsActivity extends AppCompatActivity {
     private Executor executor;
     private boolean isFavorite;
 
-    // Bind views using ButterKnife
-    @BindView(R.id.details_colapsingToolbar) CollapsingToolbarLayout toolbarLayout;
-    @BindView(R.id.toolbar) Toolbar toolbar;
-    @BindView(R.id.coordinatorLayout) CoordinatorLayout coordinatorLayout;
-    @BindView(R.id.details_appBar) AppBarLayout appBarLayout;
-    @BindView(R.id.headerImage) ImageView movieHeaderImage;
-    @BindView(R.id.tv_original_title) TextView movieTitle;
-    @BindView(R.id.date_tv) TextView release_date;
-    @BindView(R.id.vote_tv) TextView vote_count;
-    @BindView(R.id.description_content) TextView movie_description;
-    @BindView(R.id.stars_rb) RatingBar ratingBar;
-    @BindView(R.id.trailer_recycler) RecyclerView trailerView;
-    @BindView(R.id.review_recycler) RecyclerView reviewsRecycler;
-    @BindView(R.id.favoriteButton) FloatingActionButton favouriteButton;
-
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_movie_details);
         ButterKnife.bind(this);
@@ -96,6 +108,13 @@ public class DetailsActivity extends AppCompatActivity {
         // take data from child activity
         Intent intent = getIntent();
         movie = intent.getParcelableExtra(Movie.TAG);
+
+        favouriteButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onFavoriteClicked(savedInstanceState);
+            }
+        });
 
         // inflate data into views
         populateUI();
@@ -164,13 +183,13 @@ public class DetailsActivity extends AppCompatActivity {
      */
     private void populateTrailers(Bundle savedInstance) {
         LinearLayoutManager layoutManager =
-                new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false);
+                new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
         trailerView.setLayoutManager(layoutManager);
         trailerView.setHasFixedSize(true);
         trailerView.setNestedScrollingEnabled(false);
 
         ItemOffsetDecoration decoration = new
-                ItemOffsetDecoration(this,R.dimen.trailer_item_decoration);
+                ItemOffsetDecoration(this, R.dimen.trailer_item_decoration);
         trailerView.addItemDecoration(decoration);
 
         trailerAdapter = new TrailerAdapter(this);
@@ -181,7 +200,7 @@ public class DetailsActivity extends AppCompatActivity {
         } else {
             Service apiService = RetrofitClient.getClient().create(Service.class);
 
-            Call<ApiResponse<Video>> call = apiService.getMovieTrailers(movie.getId(),Config.API_KEY);
+            Call<ApiResponse<Video>> call = apiService.getMovieTrailers(movie.getId(), Config.API_KEY);
 
             call.enqueue(new Callback<ApiResponse<Video>>() {
                 @Override
@@ -221,7 +240,7 @@ public class DetailsActivity extends AppCompatActivity {
             reviewAdapter.setItems(savedInstance.<Review>getParcelableArrayList(Movie.TAG));
         } else {
             Service apiService = RetrofitClient.getClient().create(Service.class);
-            Call<ApiResponse<Review>> call = apiService.getMovieReviews(movie.getId(),Config.API_KEY);
+            Call<ApiResponse<Review>> call = apiService.getMovieReviews(movie.getId(), Config.API_KEY);
 
             call.enqueue(new Callback<ApiResponse<Review>>() {
                 @Override
@@ -231,6 +250,7 @@ public class DetailsActivity extends AppCompatActivity {
                         reviewAdapter.setItems(reviews);
                     }
                 }
+
                 @Override
                 public void onFailure(Call<ApiResponse<Review>> call, Throwable t) {
                     // TODO : SHUT UP THE FUCK
@@ -242,36 +262,40 @@ public class DetailsActivity extends AppCompatActivity {
     /**
      * Add Movie to favorite or remove it from
      */
-    public void onFavoriteClicked(View view) {
+    public void onFavoriteClicked(Bundle savedInstance) {
         // snackBar text
         String snackBarText;
 
-        // if the movie already exist
-        if (isFavorite) {
-            executor.execute(new Runnable() {
-                @Override
-                public void run() {
-                    movieDb.movieDAO().delete(movie);
-                }
-            });
-            isFavorite = false;
-
-            // set favorite removed icon
-            favouriteButton.setImageResource(R.drawable.ic_favorite_border);
-            snackBarText = getString(R.string.favorite_removed);
+        if (savedInstance != null && savedInstance.containsKey(Movie.TAG)) {
+            reviewAdapter.setItems(savedInstance.<Review>getParcelableArrayList(Movie.TAG));
         } else {
-            executor.execute(new Runnable() {
-                @Override
-                public void run() {
-                    movieDb.movieDAO().insert(movie);
-                }
-            });
-            isFavorite = true;
-            // set favorite added icon
-            favouriteButton.setImageResource(R.drawable.ic_favorite_added);
-            snackBarText = getString(R.string.favorite_added);
+            // if the movie already exist
+            if (isFavorite) {
+                executor.execute(new Runnable() {
+                    @Override
+                    public void run() {
+                        movieDb.movieDAO().delete(movie);
+                    }
+                });
+                isFavorite = false;
+
+                // set favorite removed icon
+                favouriteButton.setImageResource(R.drawable.ic_favorite_border);
+                snackBarText = getString(R.string.favorite_removed);
+            } else {
+                executor.execute(new Runnable() {
+                    @Override
+                    public void run() {
+                        movieDb.movieDAO().insert(movie);
+                    }
+                });
+                isFavorite = true;
+                // set favorite added icon
+                favouriteButton.setImageResource(R.drawable.ic_favorite_added);
+                snackBarText = getString(R.string.favorite_added);
+            }
+            Snackbar.make(coordinatorLayout, snackBarText, Snackbar.LENGTH_SHORT).show();
         }
-        Snackbar.make(coordinatorLayout,snackBarText,Snackbar.LENGTH_SHORT).show();
     }
 
     @Override

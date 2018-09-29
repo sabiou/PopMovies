@@ -1,14 +1,22 @@
 package xyz.godi.popularmovies.data;
 
+import android.arch.lifecycle.ComputableLiveData;
+import android.arch.lifecycle.LiveData;
 import android.arch.persistence.db.SupportSQLiteStatement;
 import android.arch.persistence.room.EntityDeletionOrUpdateAdapter;
 import android.arch.persistence.room.EntityInsertionAdapter;
+import android.arch.persistence.room.InvalidationTracker.Observer;
 import android.arch.persistence.room.RoomDatabase;
 import android.arch.persistence.room.RoomSQLiteQuery;
 import android.database.Cursor;
+import android.support.annotation.NonNull;
+import java.lang.Integer;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
 import xyz.godi.popularmovies.model.FavoriteMovie;
 import xyz.godi.popularmovies.model.Movie;
 
@@ -97,6 +105,73 @@ public class MovieDAO_Impl implements MovieDAO {
     } finally {
       __db.endTransaction();
     }
+  }
+
+  @Override
+  public LiveData<List<Movie>> getAll() {
+    final String _sql = "SELECT * FROM Movie";
+    final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 0);
+    return new ComputableLiveData<List<Movie>>() {
+      private Observer _observer;
+
+      @Override
+      protected List<Movie> compute() {
+        if (_observer == null) {
+          _observer = new Observer("Movie") {
+            @Override
+            public void onInvalidated(@NonNull Set<String> tables) {
+              invalidate();
+            }
+          };
+          __db.getInvalidationTracker().addWeakObserver(_observer);
+        }
+        final Cursor _cursor = __db.query(_statement);
+        try {
+          final int _cursorIndexOfId = _cursor.getColumnIndexOrThrow("id");
+          final int _cursorIndexOfPosterPath = _cursor.getColumnIndexOrThrow("poster_path");
+          final int _cursorIndexOfBackdropPath = _cursor.getColumnIndexOrThrow("backdrop_path");
+          final int _cursorIndexOfOriginalTitle = _cursor.getColumnIndexOrThrow("original_title");
+          final int _cursorIndexOfReleaseDate = _cursor.getColumnIndexOrThrow("release_date");
+          final int _cursorIndexOfVoteCount = _cursor.getColumnIndexOrThrow("vote_count");
+          final int _cursorIndexOfVoteAverage = _cursor.getColumnIndexOrThrow("vote_average");
+          final int _cursorIndexOfOverview = _cursor.getColumnIndexOrThrow("overview");
+          final List<Movie> _result = new ArrayList<Movie>(_cursor.getCount());
+          while(_cursor.moveToNext()) {
+            final Movie _item;
+            final int _tmpId;
+            _tmpId = _cursor.getInt(_cursorIndexOfId);
+            final String _tmpPoster_path;
+            _tmpPoster_path = _cursor.getString(_cursorIndexOfPosterPath);
+            final String _tmpBackdrop_path;
+            _tmpBackdrop_path = _cursor.getString(_cursorIndexOfBackdropPath);
+            final String _tmpOriginal_title;
+            _tmpOriginal_title = _cursor.getString(_cursorIndexOfOriginalTitle);
+            final String _tmpRelease_date;
+            _tmpRelease_date = _cursor.getString(_cursorIndexOfReleaseDate);
+            final Integer _tmpVote_count;
+            if (_cursor.isNull(_cursorIndexOfVoteCount)) {
+              _tmpVote_count = null;
+            } else {
+              _tmpVote_count = _cursor.getInt(_cursorIndexOfVoteCount);
+            }
+            final double _tmpVote_average;
+            _tmpVote_average = _cursor.getDouble(_cursorIndexOfVoteAverage);
+            final String _tmpOverview;
+            _tmpOverview = _cursor.getString(_cursorIndexOfOverview);
+            _item = new Movie(_tmpId,_tmpPoster_path,_tmpBackdrop_path,_tmpOriginal_title,_tmpRelease_date,_tmpVote_count,_tmpVote_average,_tmpOverview);
+            _result.add(_item);
+          }
+          return _result;
+        } finally {
+          _cursor.close();
+        }
+      }
+
+      @Override
+      protected void finalize() {
+        _statement.release();
+      }
+    }.getLiveData();
   }
 
   @Override

@@ -79,6 +79,11 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHol
                 .into(holder.poster_iv);
     }
 
+    public void setMovies(List<Movie> movieList) {
+        movies = movieList;
+        notifyDataSetChanged();
+    }
+
     @Override
     public int getItemCount() {
         return movies.size();

@@ -212,7 +212,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void showSortDialog() {
         // options to display in dialog
-        String[] sortOptions = {"Popular", "Top rated"};
+        String[] sortOptions = {"Popular", "Top rated", "Favorites"};
 
         //  Create alert dialog
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -224,9 +224,10 @@ public class MainActivity extends AppCompatActivity {
                         // load movies accordingly to the selected option
                         if (which == 0) {
                             loadPopularMovies();
-                            recreate();
                         } else if (which == 1) {
                             loadTopRatedMovies();
+                        } else if (which == 2) {
+                            loadFavorites();
                         }
                         loadTopRatedMovies();
                     }

@@ -110,6 +110,7 @@
         app:fabSize="normal"
         app:layout_anchor="@id/details_appBar"
         app:layout_anchorGravity="end|right|bottom"
-        app:srcCompat="@drawable/ic_favorite_border" />
+        app:srcCompat="@drawable/ic_favorite_border"
+        android:onClick="onFavoriteClicked"/>
 
 </android.support.design.widget.CoordinatorLayout>

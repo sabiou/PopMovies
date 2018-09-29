@@ -18,6 +18,7 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
@@ -241,7 +242,7 @@ public class DetailsActivity extends AppCompatActivity {
     /**
      * Add Movie to favorite or remove it from
      */
-    public void onFavoriteClicked() {
+    public void onFavoriteClicked(View view) {
         // snackBar text
         String snackBarText;
 

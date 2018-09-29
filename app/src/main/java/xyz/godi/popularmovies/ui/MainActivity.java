@@ -26,6 +26,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.List;
+import java.util.concurrent.Executor;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -36,9 +37,11 @@ import xyz.godi.popularmovies.R;
 import xyz.godi.popularmovies.api.ApiResponse;
 import xyz.godi.popularmovies.api.RetrofitClient;
 import xyz.godi.popularmovies.api.Service;
+import xyz.godi.popularmovies.data.MovieDataBase;
 import xyz.godi.popularmovies.model.Movie;
 import xyz.godi.popularmovies.ui.adapters.MovieAdapter;
 import xyz.godi.popularmovies.utils.Config;
+import xyz.godi.popularmovies.utils.MovieExec;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -48,6 +51,8 @@ public class MainActivity extends AppCompatActivity {
     SharedPreferences mSharedPref;
 
     private MovieAdapter movieAdapter;
+    private MovieDataBase movieDatabase;
+    private Executor executor;
 
     // Bind views using ButterKnife
     @BindView(R.id.mainLayout) FrameLayout homeLayout;
@@ -67,6 +72,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
+
+        // instanciate the Executor
+        executor = new MovieExec();
+        // instaciate database
+        movieDatabase = MovieDataBase.getDatabase(this);
 
         // set layout manager
         movie_recycler.setLayoutManager(new GridLayoutManager(this, getSpanCount()));
@@ -158,6 +168,17 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onFailure(Call<ApiResponse<Movie>> call, Throwable t) {
                 Log.e(LOG_TAG, t.getMessage());
+            }
+        });
+    }
+
+    private void loadFavorites() {
+        // run operation in a background thread
+        executor.execute(new Runnable() {
+            @Override
+            public void run() {
+                List<Movie> movies = movieDatabase.movieDAO().getAll();
+                movie_recycler.setAdapter(new MovieAdapter(getApplicationContext(),movies));
             }
         });
     }

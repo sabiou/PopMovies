@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/details"
+        android:icon="@drawable/ic_movie_24dp"
+        android:title="@string/details_fragments"/>
+
+    <item
+        android:id="@+id/trailer"
+        android:icon="@drawable/ic_trailer_24dp"
+        android:title="@string/trailers_fragments"/>
+
+    <item
+        android:id="@+id/review"
+        android:icon="@drawable/ic_review_24dp"
+        android:title="@string/review_fragments"/>
+
+</menu>

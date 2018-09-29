@@ -1,0 +1,203 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml:2:1-37:12
+INJECTED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml:2:1-37:12
+INJECTED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml:2:1-37:12
+INJECTED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml:2:1-37:12
+MERGED from [com.android.support:design:27.1.1] /home/farouk/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/7d3c8921b01ee3db628fba8dffb749f6/AndroidManifest.xml:17:1-22:12
+MERGED from [de.psdev.licensesdialog:licensesdialog:1.8.3] /home/farouk/.gradle/caches/transforms-1/files-1.1/licensesdialog-1.8.3.aar/bddcd827e94426802b27193178980aa4/AndroidManifest.xml:16:6-20:12
+MERGED from [com.android.support:appcompat-v7:27.1.1] /home/farouk/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/ad2e92f1432bf95d5e7eed837e22ca02/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /home/farouk/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.2.aar/de52278c924785dd454caeaa4e4c4ae3/AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:support-v4:27.1.1] /home/farouk/.gradle/caches/transforms-1/files-1.1/support-v4-27.1.1.aar/670c85e27a1205c78bed91e83d3518ac/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /home/farouk/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/e703ccfddd68c74d61c30486c545faf2/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /home/farouk/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/d3e026b68c8e8ca6cda81bec5225238b/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:recyclerview-v7:27.1.1] /home/farouk/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.1.1.aar/9ddb3c6547f0bf346e42126d6212cf75/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:cardview-v7:27.1.1] /home/farouk/.gradle/caches/transforms-1/files-1.1/cardview-v7-27.1.1.aar/c4c41906bb1102d0a95676fc54d103d5/AndroidManifest.xml:17:1-22:12
+MERGED from [com.jakewharton:butterknife:8.8.1] /home/farouk/.gradle/caches/transforms-1/files-1.1/butterknife-8.8.1.aar/fe29a01f0cae735641342d74b083b099/AndroidManifest.xml:2:1-7:12
+MERGED from [com.squareup.picasso:picasso:2.71828] /home/farouk/.gradle/caches/transforms-1/files-1.1/picasso-2.71828.aar/6c02ae47ad26c3d97cae3f0ef8d1d318/AndroidManifest.xml:2:1-14:12
+MERGED from [com.android.support:palette-v7:27.1.1] /home/farouk/.gradle/caches/transforms-1/files-1.1/palette-v7-27.1.1.aar/12b1ad5f8500576dbcb62909b5c4d1ce/AndroidManifest.xml:17:1-22:12
+MERGED from [com.facebook.fresco:fresco:1.10.0] /home/farouk/.gradle/caches/transforms-1/files-1.1/fresco-1.10.0.aar/9b4c9a88e5c1db64b55c1c7471c79728/AndroidManifest.xml:2:1-9:12
+MERGED from [android.arch.persistence.room:runtime:1.1.1] /home/farouk/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/9c4af94bd36200e55a79e910d0dad104/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:transition:27.1.1] /home/farouk/.gradle/caches/transforms-1/files-1.1/transition-27.1.1.aar/641ade5a9adc3798ab5218334b17d835/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:27.1.1] /home/farouk/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/8298ba0c7e7f259e9c66b6521e699db2/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:27.1.1] /home/farouk/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/fc9825f93d8e7102289f1e0149611720/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-media-compat:27.1.1] /home/farouk/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/3d9ca03d5a252dfebc3c5def70bed48b/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:27.1.1] /home/farouk/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/98c402cba1fa613eb17eff2bf46133d6/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:27.1.1] /home/farouk/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/60558047c84e32676bae7879c03c4b89/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /home/farouk/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/a3e1bf3551a6dc2980233735ccf4365e/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:exifinterface:27.1.0] /home/farouk/.gradle/caches/transforms-1/files-1.1/exifinterface-27.1.0.aar/c9bdb4273869bdf459b4640e8ff7851a/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.persistence:db-framework:1.1.1] /home/farouk/.gradle/caches/transforms-1/files-1.1/db-framework-1.1.1.aar/0016803c3cffa1c4e8a04d7ac4404fb9/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.persistence:db:1.1.1] /home/farouk/.gradle/caches/transforms-1/files-1.1/db-1.1.1.aar/47b22d65eb93c26c4be21b7fa63bde99/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /home/farouk/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/a303d3facf6ec5ce0c699d0a52abca10/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.1] /home/farouk/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/6845a60dfa87eb5cd206e6ca59443ca5/AndroidManifest.xml:17:1-22:12
+MERGED from [com.facebook.fresco:drawee:1.10.0] /home/farouk/.gradle/caches/transforms-1/files-1.1/drawee-1.10.0.aar/3be7bf7c2a6746649374bc458b0e507c/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline:1.10.0] /home/farouk/.gradle/caches/transforms-1/files-1.1/imagepipeline-1.10.0.aar/da2b8ecd4880a7d88e0ca632c3e4843b/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline-base:1.10.0] /home/farouk/.gradle/caches/transforms-1/files-1.1/imagepipeline-base-1.10.0.aar/e355bf3ae644381486e67a0edd4fd72c/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:fbcore:1.10.0] /home/farouk/.gradle/caches/transforms-1/files-1.1/fbcore-1.10.0.aar/f6cbe6ef22377564e5a0b47977146abb/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.soloader:soloader:0.5.0] /home/farouk/.gradle/caches/transforms-1/files-1.1/soloader-0.5.0.aar/647003c24089f8ffa708c65d8103192a/AndroidManifest.xml:2:1-13:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /home/farouk/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/37055df155debe987696aebad7e225ad/AndroidManifest.xml:17:1-22:12
+INJECTED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml:2:1-37:12
+INJECTED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml:2:1-37:12
+INJECTED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml:2:1-37:12
+	package
+		ADDED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml:3:5-37
+		INJECTED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml
+		INJECTED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml
+		ADDED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml:2:1-37:12
+		INJECTED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml
+		ADDED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml:2:1-37:12
+		INJECTED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml:2:11-69
+uses-permission#android.permission.INTERNET
+ADDED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml:5:5-67
+	android:name
+		ADDED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml:5:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml:6:5-79
+	android:name
+		ADDED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml:6:22-76
+application
+ADDED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml:8:5-35:19
+MERGED from [de.psdev.licensesdialog:licensesdialog:1.8.3] /home/farouk/.gradle/caches/transforms-1/files-1.1/licensesdialog-1.8.3.aar/bddcd827e94426802b27193178980aa4/AndroidManifest.xml:19:5-19
+MERGED from [de.psdev.licensesdialog:licensesdialog:1.8.3] /home/farouk/.gradle/caches/transforms-1/files-1.1/licensesdialog-1.8.3.aar/bddcd827e94426802b27193178980aa4/AndroidManifest.xml:19:5-19
+MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /home/farouk/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.2.aar/de52278c924785dd454caeaa4e4c4ae3/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /home/farouk/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.2.aar/de52278c924785dd454caeaa4e4c4ae3/AndroidManifest.xml:9:5-20
+MERGED from [com.squareup.picasso:picasso:2.71828] /home/farouk/.gradle/caches/transforms-1/files-1.1/picasso-2.71828.aar/6c02ae47ad26c3d97cae3f0ef8d1d318/AndroidManifest.xml:7:5-12:19
+MERGED from [com.squareup.picasso:picasso:2.71828] /home/farouk/.gradle/caches/transforms-1/files-1.1/picasso-2.71828.aar/6c02ae47ad26c3d97cae3f0ef8d1d318/AndroidManifest.xml:7:5-12:19
+MERGED from [com.facebook.soloader:soloader:0.5.0] /home/farouk/.gradle/caches/transforms-1/files-1.1/soloader-0.5.0.aar/647003c24089f8ffa708c65d8103192a/AndroidManifest.xml:11:5-20
+MERGED from [com.facebook.soloader:soloader:0.5.0] /home/farouk/.gradle/caches/transforms-1/files-1.1/soloader-0.5.0.aar/647003c24089f8ffa708c65d8103192a/AndroidManifest.xml:11:5-20
+	android:supportsRtl
+		ADDED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml:13:9-35
+	android:label
+		ADDED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml:11:9-41
+	android:roundIcon
+		ADDED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml:12:9-54
+	android:icon
+		ADDED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml:10:9-43
+	android:allowBackup
+		ADDED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml:9:9-35
+	android:theme
+		ADDED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml:14:9-40
+activity#xyz.godi.popularmovies.ui.MainActivity
+ADDED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml:15:9-23:20
+	android:launchMode
+		ADDED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml:17:13-43
+	android:name
+		ADDED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml:16:13-44
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml:18:13-22:29
+action#android.intent.action.MAIN
+ADDED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml:19:17-69
+	android:name
+		ADDED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml:19:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml:21:17-77
+	android:name
+		ADDED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml:21:27-74
+activity#xyz.godi.popularmovies.ui.DetailsActivity
+ADDED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml:24:9-27:59
+	android:parentActivityName
+		ADDED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml:26:13-58
+	android:theme
+		ADDED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml:27:13-56
+	android:name
+		ADDED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml:25:13-47
+activity#xyz.godi.popularmovies.ui.AboutActivity
+ADDED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml:29:9-33:20
+	android:parentActivityName
+		ADDED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml:31:13-58
+	android:label
+		ADDED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml:30:13-34
+	android:name
+		ADDED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml:29:19-51
+uses-sdk
+INJECTED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml
+INJECTED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml
+MERGED from [com.android.support:design:27.1.1] /home/farouk/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/7d3c8921b01ee3db628fba8dffb749f6/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:27.1.1] /home/farouk/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/7d3c8921b01ee3db628fba8dffb749f6/AndroidManifest.xml:20:5-44
+MERGED from [de.psdev.licensesdialog:licensesdialog:1.8.3] /home/farouk/.gradle/caches/transforms-1/files-1.1/licensesdialog-1.8.3.aar/bddcd827e94426802b27193178980aa4/AndroidManifest.xml:18:5-72
+MERGED from [de.psdev.licensesdialog:licensesdialog:1.8.3] /home/farouk/.gradle/caches/transforms-1/files-1.1/licensesdialog-1.8.3.aar/bddcd827e94426802b27193178980aa4/AndroidManifest.xml:18:5-72
+MERGED from [com.android.support:appcompat-v7:27.1.1] /home/farouk/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/ad2e92f1432bf95d5e7eed837e22ca02/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.1] /home/farouk/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/ad2e92f1432bf95d5e7eed837e22ca02/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /home/farouk/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.2.aar/de52278c924785dd454caeaa4e4c4ae3/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /home/farouk/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.2.aar/de52278c924785dd454caeaa4e4c4ae3/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:support-v4:27.1.1] /home/farouk/.gradle/caches/transforms-1/files-1.1/support-v4-27.1.1.aar/670c85e27a1205c78bed91e83d3518ac/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.1.1] /home/farouk/.gradle/caches/transforms-1/files-1.1/support-v4-27.1.1.aar/670c85e27a1205c78bed91e83d3518ac/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /home/farouk/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/e703ccfddd68c74d61c30486c545faf2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /home/farouk/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/e703ccfddd68c74d61c30486c545faf2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /home/farouk/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/d3e026b68c8e8ca6cda81bec5225238b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /home/farouk/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/d3e026b68c8e8ca6cda81bec5225238b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.1.1] /home/farouk/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.1.1.aar/9ddb3c6547f0bf346e42126d6212cf75/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:27.1.1] /home/farouk/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-27.1.1.aar/9ddb3c6547f0bf346e42126d6212cf75/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:27.1.1] /home/farouk/.gradle/caches/transforms-1/files-1.1/cardview-v7-27.1.1.aar/c4c41906bb1102d0a95676fc54d103d5/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:27.1.1] /home/farouk/.gradle/caches/transforms-1/files-1.1/cardview-v7-27.1.1.aar/c4c41906bb1102d0a95676fc54d103d5/AndroidManifest.xml:20:5-44
+MERGED from [com.jakewharton:butterknife:8.8.1] /home/farouk/.gradle/caches/transforms-1/files-1.1/butterknife-8.8.1.aar/fe29a01f0cae735641342d74b083b099/AndroidManifest.xml:5:5-43
+MERGED from [com.jakewharton:butterknife:8.8.1] /home/farouk/.gradle/caches/transforms-1/files-1.1/butterknife-8.8.1.aar/fe29a01f0cae735641342d74b083b099/AndroidManifest.xml:5:5-43
+MERGED from [com.squareup.picasso:picasso:2.71828] /home/farouk/.gradle/caches/transforms-1/files-1.1/picasso-2.71828.aar/6c02ae47ad26c3d97cae3f0ef8d1d318/AndroidManifest.xml:5:5-44
+MERGED from [com.squareup.picasso:picasso:2.71828] /home/farouk/.gradle/caches/transforms-1/files-1.1/picasso-2.71828.aar/6c02ae47ad26c3d97cae3f0ef8d1d318/AndroidManifest.xml:5:5-44
+MERGED from [com.android.support:palette-v7:27.1.1] /home/farouk/.gradle/caches/transforms-1/files-1.1/palette-v7-27.1.1.aar/12b1ad5f8500576dbcb62909b5c4d1ce/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:palette-v7:27.1.1] /home/farouk/.gradle/caches/transforms-1/files-1.1/palette-v7-27.1.1.aar/12b1ad5f8500576dbcb62909b5c4d1ce/AndroidManifest.xml:20:5-44
+MERGED from [com.facebook.fresco:fresco:1.10.0] /home/farouk/.gradle/caches/transforms-1/files-1.1/fresco-1.10.0.aar/9b4c9a88e5c1db64b55c1c7471c79728/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fresco:1.10.0] /home/farouk/.gradle/caches/transforms-1/files-1.1/fresco-1.10.0.aar/9b4c9a88e5c1db64b55c1c7471c79728/AndroidManifest.xml:5:5-7:41
+MERGED from [android.arch.persistence.room:runtime:1.1.1] /home/farouk/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/9c4af94bd36200e55a79e910d0dad104/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.persistence.room:runtime:1.1.1] /home/farouk/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/9c4af94bd36200e55a79e910d0dad104/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.1.1] /home/farouk/.gradle/caches/transforms-1/files-1.1/transition-27.1.1.aar/641ade5a9adc3798ab5218334b17d835/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.1.1] /home/farouk/.gradle/caches/transforms-1/files-1.1/transition-27.1.1.aar/641ade5a9adc3798ab5218334b17d835/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] /home/farouk/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/8298ba0c7e7f259e9c66b6521e699db2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] /home/farouk/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/8298ba0c7e7f259e9c66b6521e699db2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] /home/farouk/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/fc9825f93d8e7102289f1e0149611720/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] /home/farouk/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/fc9825f93d8e7102289f1e0149611720/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] /home/farouk/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/3d9ca03d5a252dfebc3c5def70bed48b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] /home/farouk/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/3d9ca03d5a252dfebc3c5def70bed48b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] /home/farouk/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/98c402cba1fa613eb17eff2bf46133d6/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] /home/farouk/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/98c402cba1fa613eb17eff2bf46133d6/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] /home/farouk/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/60558047c84e32676bae7879c03c4b89/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] /home/farouk/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/60558047c84e32676bae7879c03c4b89/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /home/farouk/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/a3e1bf3551a6dc2980233735ccf4365e/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /home/farouk/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/a3e1bf3551a6dc2980233735ccf4365e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:exifinterface:27.1.0] /home/farouk/.gradle/caches/transforms-1/files-1.1/exifinterface-27.1.0.aar/c9bdb4273869bdf459b4640e8ff7851a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:exifinterface:27.1.0] /home/farouk/.gradle/caches/transforms-1/files-1.1/exifinterface-27.1.0.aar/c9bdb4273869bdf459b4640e8ff7851a/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.persistence:db-framework:1.1.1] /home/farouk/.gradle/caches/transforms-1/files-1.1/db-framework-1.1.1.aar/0016803c3cffa1c4e8a04d7ac4404fb9/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.persistence:db-framework:1.1.1] /home/farouk/.gradle/caches/transforms-1/files-1.1/db-framework-1.1.1.aar/0016803c3cffa1c4e8a04d7ac4404fb9/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.persistence:db:1.1.1] /home/farouk/.gradle/caches/transforms-1/files-1.1/db-1.1.1.aar/47b22d65eb93c26c4be21b7fa63bde99/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.persistence:db:1.1.1] /home/farouk/.gradle/caches/transforms-1/files-1.1/db-1.1.1.aar/47b22d65eb93c26c4be21b7fa63bde99/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /home/farouk/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/a303d3facf6ec5ce0c699d0a52abca10/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /home/farouk/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/a303d3facf6ec5ce0c699d0a52abca10/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] /home/farouk/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/6845a60dfa87eb5cd206e6ca59443ca5/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] /home/farouk/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/6845a60dfa87eb5cd206e6ca59443ca5/AndroidManifest.xml:20:5-44
+MERGED from [com.facebook.fresco:drawee:1.10.0] /home/farouk/.gradle/caches/transforms-1/files-1.1/drawee-1.10.0.aar/3be7bf7c2a6746649374bc458b0e507c/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:drawee:1.10.0] /home/farouk/.gradle/caches/transforms-1/files-1.1/drawee-1.10.0.aar/3be7bf7c2a6746649374bc458b0e507c/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline:1.10.0] /home/farouk/.gradle/caches/transforms-1/files-1.1/imagepipeline-1.10.0.aar/da2b8ecd4880a7d88e0ca632c3e4843b/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline:1.10.0] /home/farouk/.gradle/caches/transforms-1/files-1.1/imagepipeline-1.10.0.aar/da2b8ecd4880a7d88e0ca632c3e4843b/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-base:1.10.0] /home/farouk/.gradle/caches/transforms-1/files-1.1/imagepipeline-base-1.10.0.aar/e355bf3ae644381486e67a0edd4fd72c/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-base:1.10.0] /home/farouk/.gradle/caches/transforms-1/files-1.1/imagepipeline-base-1.10.0.aar/e355bf3ae644381486e67a0edd4fd72c/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fbcore:1.10.0] /home/farouk/.gradle/caches/transforms-1/files-1.1/fbcore-1.10.0.aar/f6cbe6ef22377564e5a0b47977146abb/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fbcore:1.10.0] /home/farouk/.gradle/caches/transforms-1/files-1.1/fbcore-1.10.0.aar/f6cbe6ef22377564e5a0b47977146abb/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.soloader:soloader:0.5.0] /home/farouk/.gradle/caches/transforms-1/files-1.1/soloader-0.5.0.aar/647003c24089f8ffa708c65d8103192a/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.soloader:soloader:0.5.0] /home/farouk/.gradle/caches/transforms-1/files-1.1/soloader-0.5.0.aar/647003c24089f8ffa708c65d8103192a/AndroidManifest.xml:7:5-9:41
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /home/farouk/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/37055df155debe987696aebad7e225ad/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /home/farouk/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/37055df155debe987696aebad7e225ad/AndroidManifest.xml:20:5-44
+INJECTED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml
+INJECTED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml
+		ADDED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml
+		INJECTED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml
+		ADDED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml
+		INJECTED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml
+provider#com.squareup.picasso.PicassoProvider
+ADDED from [com.squareup.picasso:picasso:2.71828] /home/farouk/.gradle/caches/transforms-1/files-1.1/picasso-2.71828.aar/6c02ae47ad26c3d97cae3f0ef8d1d318/AndroidManifest.xml:8:9-11:40
+	android:authorities
+		ADDED from [com.squareup.picasso:picasso:2.71828] /home/farouk/.gradle/caches/transforms-1/files-1.1/picasso-2.71828.aar/6c02ae47ad26c3d97cae3f0ef8d1d318/AndroidManifest.xml:10:13-72
+	android:exported
+		ADDED from [com.squareup.picasso:picasso:2.71828] /home/farouk/.gradle/caches/transforms-1/files-1.1/picasso-2.71828.aar/6c02ae47ad26c3d97cae3f0ef8d1d318/AndroidManifest.xml:11:13-37
+	android:name
+		ADDED from [com.squareup.picasso:picasso:2.71828] /home/farouk/.gradle/caches/transforms-1/files-1.1/picasso-2.71828.aar/6c02ae47ad26c3d97cae3f0ef8d1d318/AndroidManifest.xml:9:13-64

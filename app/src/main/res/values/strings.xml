@@ -1,0 +1,60 @@
+<resources>
+    <string name="app_name">Popular Movies</string>
+    <string name="settings_string">Settings</string>
+
+    <string name="top_rated_sort_label">Rating</string>
+    <string name="popularity_sort_label">Popularity</string>
+
+    <string name="top_rated_sort_value">top_rated</string>
+    <string name="popularity_sort_value">popular</string>
+
+    <string-array name="preference_sort_names">
+        <item>@string/popularity_sort_label</item>
+        <item>@string/top_rated_sort_label</item>
+    </string-array>
+
+    <string-array name="preference_sort_values">
+        <item>@string/popularity_sort_value</item>
+        <item>@string/top_rated_sort_value</item>
+    </string-array>
+
+    <string name="movie_poster_content_description">Movie poster</string>
+
+    <string name="pref_sort_key" translatable="false">Sort</string>
+
+    <string name="favorite_added">Added to favorite</string>
+
+    <string name="favorite_removed">Removed from favorite</string>
+
+    <string name="no_internet_connection">Oups! look like you\'re not connected to internet</string>
+    <string name="overview">Overview</string>
+    <string name="vote_counting">/10</string>
+    <string name="share_button">share</string>
+    <string name="date_placeholder">2016-03-23</string>
+    <string name="vote_count">Vote count</string>
+    <string name="rating">Rating</string>
+    <string name="release_date">Release date</string>
+    <string name="movie_original_title">Title</string>
+    <string name="header_image">header image</string>
+    <string name="open_source_licences">Open source licences</string>
+    <string name="about_title">Popular Movies by Farouk version v1.0</string>
+    <string name="about_app">About</string>
+    <string name="sort_movie">Sort movie</string>
+    <string name="about_text">Popular Movies is an app made for Android Developer Nanodegree program</string>
+    <string name="licences">Licences</string>
+    <string name="trailers_fragments">Trailers</string>
+    <string name="details_fragments">Infos</string>
+    <string name="review_fragments">Review</string>
+
+    <string-array name="movie_sort_dialog_choices">
+        <item>Most popular</item>
+        <item>Top rated</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="trailers_text">Trailers</string>
+    <string name="review_text">Reviews</string>
+    <string name="network_error">Error while receiving data from server</string>
+
+</resources>

@@ -9,7 +9,6 @@ import android.database.Cursor;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
-
 import xyz.godi.popularmovies.model.FavoriteMovie;
 import xyz.godi.popularmovies.model.Movie;
 

@@ -6,6 +6,7 @@ import android.support.annotation.UiThread;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -27,6 +28,7 @@ public class MainActivity_ViewBinding implements Unbinder {
   public MainActivity_ViewBinding(MainActivity target, View source) {
     this.target = target;
 
+    target.homeLayout = Utils.findRequiredViewAsType(source, R.id.mainLayout, "field 'homeLayout'", FrameLayout.class);
     target.movie_recycler = Utils.findRequiredViewAsType(source, R.id.movie_rv, "field 'movie_recycler'", RecyclerView.class);
     target.loading_spinner = Utils.findRequiredViewAsType(source, R.id.loading_spinner, "field 'loading_spinner'", ProgressBar.class);
     target.emptyView_tv = Utils.findRequiredViewAsType(source, R.id.empty_view, "field 'emptyView_tv'", TextView.class);
@@ -41,6 +43,7 @@ public class MainActivity_ViewBinding implements Unbinder {
     if (target == null) throw new IllegalStateException("Bindings already cleared.");
     this.target = null;
 
+    target.homeLayout = null;
     target.movie_recycler = null;
     target.loading_spinner = null;
     target.emptyView_tv = null;

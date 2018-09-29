@@ -5,6 +5,8 @@ import android.support.annotation.CallSuper;
 import android.support.annotation.UiThread;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CollapsingToolbarLayout;
+import android.support.design.widget.CoordinatorLayout;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -31,6 +33,7 @@ public class DetailsActivity_ViewBinding implements Unbinder {
 
     target.toolbarLayout = Utils.findRequiredViewAsType(source, R.id.details_colapsingToolbar, "field 'toolbarLayout'", CollapsingToolbarLayout.class);
     target.toolbar = Utils.findRequiredViewAsType(source, R.id.toolbar, "field 'toolbar'", Toolbar.class);
+    target.coordinatorLayout = Utils.findRequiredViewAsType(source, R.id.coordinatorLayout, "field 'coordinatorLayout'", CoordinatorLayout.class);
     target.appBarLayout = Utils.findRequiredViewAsType(source, R.id.details_appBar, "field 'appBarLayout'", AppBarLayout.class);
     target.movieHeaderImage = Utils.findRequiredViewAsType(source, R.id.headerImage, "field 'movieHeaderImage'", ImageView.class);
     target.movieTitle = Utils.findRequiredViewAsType(source, R.id.tv_original_title, "field 'movieTitle'", TextView.class);
@@ -40,6 +43,7 @@ public class DetailsActivity_ViewBinding implements Unbinder {
     target.ratingBar = Utils.findRequiredViewAsType(source, R.id.stars_rb, "field 'ratingBar'", RatingBar.class);
     target.trailerView = Utils.findRequiredViewAsType(source, R.id.trailer_recycler, "field 'trailerView'", RecyclerView.class);
     target.reviewsRecycler = Utils.findRequiredViewAsType(source, R.id.review_recycler, "field 'reviewsRecycler'", RecyclerView.class);
+    target.favouriteButton = Utils.findRequiredViewAsType(source, R.id.favoriteButton, "field 'favouriteButton'", FloatingActionButton.class);
   }
 
   @Override
@@ -51,6 +55,7 @@ public class DetailsActivity_ViewBinding implements Unbinder {
 
     target.toolbarLayout = null;
     target.toolbar = null;
+    target.coordinatorLayout = null;
     target.appBarLayout = null;
     target.movieHeaderImage = null;
     target.movieTitle = null;
@@ -60,5 +65,6 @@ public class DetailsActivity_ViewBinding implements Unbinder {
     target.ratingBar = null;
     target.trailerView = null;
     target.reviewsRecycler = null;
+    target.favouriteButton = null;
   }
 }

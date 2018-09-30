@@ -1,7 +1,6 @@
 package xyz.godi.popularmovies.ui;
 
 import android.arch.lifecycle.Observer;
-import android.arch.lifecycle.ViewModelProvider;
 import android.arch.lifecycle.ViewModelProviders;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -27,10 +26,8 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.List;
-import java.util.concurrent.Executor;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -41,12 +38,10 @@ import xyz.godi.popularmovies.R;
 import xyz.godi.popularmovies.api.ApiResponse;
 import xyz.godi.popularmovies.api.RetrofitClient;
 import xyz.godi.popularmovies.api.Service;
-import xyz.godi.popularmovies.data.MovieDataBase;
-import xyz.godi.popularmovies.data.MovieViewModel;
+import xyz.godi.popularmovies.viewModel.MovieViewModel;
 import xyz.godi.popularmovies.model.Movie;
 import xyz.godi.popularmovies.ui.adapters.MovieAdapter;
 import xyz.godi.popularmovies.utils.Config;
-import xyz.godi.popularmovies.utils.MovieExec;
 
 public class MainActivity extends AppCompatActivity {
 

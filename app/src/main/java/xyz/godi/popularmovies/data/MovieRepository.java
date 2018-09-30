@@ -14,13 +14,13 @@ public class MovieRepository {
     private MovieDAO dao;
     private LiveData<List<Movie>> movies;
 
-    MovieRepository(Application application) {
+    public MovieRepository(Application application) {
         MovieDataBase dataBase = MovieDataBase.getDatabase(application);
         dao = dataBase.movieDAO();
         movies = dao.getAll();
     }
 
-    LiveData<List<Movie>> getMovies() {
+    public LiveData<List<Movie>> getMovies() {
         return movies;
     }
 

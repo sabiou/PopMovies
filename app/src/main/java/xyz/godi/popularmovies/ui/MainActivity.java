@@ -235,7 +235,6 @@ public class MainActivity extends AppCompatActivity {
                 }).show(); // show the alert dialog
     }
 
-
     // Method to call on refresh
     private void refreshContent() {
         new Handler().postDelayed(new Runnable() {

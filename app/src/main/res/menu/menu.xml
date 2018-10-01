@@ -6,8 +6,12 @@
         android:title="@string/sort_movie"
         android:id="@+id/sort"
         android:icon="@drawable/ic_sort_white_24dp"
-        android:orderInCategory="100"
         app:showAsAction="ifRoom"/>
+
+    <item
+        android:title="@string/favorites"
+        android:id="@+id/favorites"
+        app:showAsAction="never"/>
 
     <item
         android:id="@+id/about"

@@ -17,7 +17,6 @@ import java.lang.SuppressWarnings;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
-import xyz.godi.popularmovies.model.FavoriteMovie;
 import xyz.godi.popularmovies.model.Movie;
 
 @SuppressWarnings("unchecked")
@@ -175,22 +174,44 @@ public class MovieDAO_Impl implements MovieDAO {
   }
 
   @Override
-  public FavoriteMovie getMovieById(String id) {
-    final String _sql = "SELECT id FROM Movie Where id = ?";
+  public Movie getMovieById(int id) {
+    final String _sql = "SELECT * FROM Movie Where id = ?";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 1);
     int _argIndex = 1;
-    if (id == null) {
-      _statement.bindNull(_argIndex);
-    } else {
-      _statement.bindString(_argIndex, id);
-    }
+    _statement.bindLong(_argIndex, id);
     final Cursor _cursor = __db.query(_statement);
     try {
       final int _cursorIndexOfId = _cursor.getColumnIndexOrThrow("id");
-      final FavoriteMovie _result;
+      final int _cursorIndexOfPosterPath = _cursor.getColumnIndexOrThrow("poster_path");
+      final int _cursorIndexOfBackdropPath = _cursor.getColumnIndexOrThrow("backdrop_path");
+      final int _cursorIndexOfOriginalTitle = _cursor.getColumnIndexOrThrow("original_title");
+      final int _cursorIndexOfReleaseDate = _cursor.getColumnIndexOrThrow("release_date");
+      final int _cursorIndexOfVoteCount = _cursor.getColumnIndexOrThrow("vote_count");
+      final int _cursorIndexOfVoteAverage = _cursor.getColumnIndexOrThrow("vote_average");
+      final int _cursorIndexOfOverview = _cursor.getColumnIndexOrThrow("overview");
+      final Movie _result;
       if(_cursor.moveToFirst()) {
-        _result = new FavoriteMovie();
-        _result.id = _cursor.getString(_cursorIndexOfId);
+        final int _tmpId;
+        _tmpId = _cursor.getInt(_cursorIndexOfId);
+        final String _tmpPoster_path;
+        _tmpPoster_path = _cursor.getString(_cursorIndexOfPosterPath);
+        final String _tmpBackdrop_path;
+        _tmpBackdrop_path = _cursor.getString(_cursorIndexOfBackdropPath);
+        final String _tmpOriginal_title;
+        _tmpOriginal_title = _cursor.getString(_cursorIndexOfOriginalTitle);
+        final String _tmpRelease_date;
+        _tmpRelease_date = _cursor.getString(_cursorIndexOfReleaseDate);
+        final Integer _tmpVote_count;
+        if (_cursor.isNull(_cursorIndexOfVoteCount)) {
+          _tmpVote_count = null;
+        } else {
+          _tmpVote_count = _cursor.getInt(_cursorIndexOfVoteCount);
+        }
+        final double _tmpVote_average;
+        _tmpVote_average = _cursor.getDouble(_cursorIndexOfVoteAverage);
+        final String _tmpOverview;
+        _tmpOverview = _cursor.getString(_cursorIndexOfOverview);
+        _result = new Movie(_tmpId,_tmpPoster_path,_tmpBackdrop_path,_tmpOriginal_title,_tmpRelease_date,_tmpVote_count,_tmpVote_average,_tmpOverview);
       } else {
         _result = null;
       }

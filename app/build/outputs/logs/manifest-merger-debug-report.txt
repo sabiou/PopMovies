@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml:2:1-37:12
-INJECTED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml:2:1-37:12
-INJECTED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml:2:1-37:12
-INJECTED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml:2:1-37:12
+ADDED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml:2:1-40:12
+INJECTED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml:2:1-40:12
+INJECTED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml:2:1-40:12
+INJECTED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml:2:1-40:12
 MERGED from [com.android.support:design:27.1.1] /home/farouk/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/7d3c8921b01ee3db628fba8dffb749f6/AndroidManifest.xml:17:1-22:12
 MERGED from [de.psdev.licensesdialog:licensesdialog:1.8.3] /home/farouk/.gradle/caches/transforms-1/files-1.1/licensesdialog-1.8.3.aar/bddcd827e94426802b27193178980aa4/AndroidManifest.xml:16:6-20:12
 MERGED from [com.android.support:appcompat-v7:27.1.1] /home/farouk/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/ad2e92f1432bf95d5e7eed837e22ca02/AndroidManifest.xml:17:1-22:12
@@ -38,20 +38,20 @@ MERGED from [com.facebook.fresco:imagepipeline:1.10.0] /home/farouk/.gradle/cach
 MERGED from [com.facebook.fresco:imagepipeline-base:1.10.0] /home/farouk/.gradle/caches/transforms-1/files-1.1/imagepipeline-base-1.10.0.aar/e355bf3ae644381486e67a0edd4fd72c/AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.fresco:fbcore:1.10.0] /home/farouk/.gradle/caches/transforms-1/files-1.1/fbcore-1.10.0.aar/f6cbe6ef22377564e5a0b47977146abb/AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.soloader:soloader:0.5.0] /home/farouk/.gradle/caches/transforms-1/files-1.1/soloader-0.5.0.aar/647003c24089f8ffa708c65d8103192a/AndroidManifest.xml:2:1-13:12
-INJECTED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml:2:1-37:12
-INJECTED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml:2:1-37:12
-INJECTED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml:2:1-37:12
+INJECTED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml:2:1-40:12
+INJECTED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml:2:1-40:12
+INJECTED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml:2:1-40:12
 	package
 		ADDED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml:3:5-37
 		INJECTED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml
 		INJECTED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml
-		ADDED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml:2:1-37:12
+		ADDED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml:2:1-40:12
 		INJECTED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml
-		ADDED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml:2:1-37:12
+		ADDED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml:2:1-40:12
 		INJECTED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml:2:11-69
@@ -64,7 +64,7 @@ ADDED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/
 	android:name
 		ADDED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml:6:22-76
 application
-ADDED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml:8:5-35:19
+ADDED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml:8:5-38:19
 MERGED from [de.psdev.licensesdialog:licensesdialog:1.8.3] /home/farouk/.gradle/caches/transforms-1/files-1.1/licensesdialog-1.8.3.aar/bddcd827e94426802b27193178980aa4/AndroidManifest.xml:19:5-19
 MERGED from [de.psdev.licensesdialog:licensesdialog:1.8.3] /home/farouk/.gradle/caches/transforms-1/files-1.1/licensesdialog-1.8.3.aar/bddcd827e94426802b27193178980aa4/AndroidManifest.xml:19:5-19
 MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /home/farouk/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.2.aar/de52278c924785dd454caeaa4e4c4ae3/AndroidManifest.xml:9:5-20
@@ -104,21 +104,27 @@ ADDED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/
 	android:name
 		ADDED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml:21:27-74
 activity#xyz.godi.popularmovies.ui.DetailsActivity
-ADDED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml:24:9-27:59
-	android:parentActivityName
-		ADDED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml:26:13-58
+ADDED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml:24:9-26:59
 	android:theme
-		ADDED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml:27:13-56
+		ADDED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml:26:13-56
 	android:name
 		ADDED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml:25:13-47
 activity#xyz.godi.popularmovies.ui.AboutActivity
-ADDED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml:29:9-33:20
+ADDED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml:27:9-32:20
 	android:parentActivityName
-		ADDED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml:31:13-58
+		ADDED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml:30:13-58
 	android:label
-		ADDED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml:30:13-34
+		ADDED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml:29:13-34
 	android:name
-		ADDED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml:29:19-51
+		ADDED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml:28:13-45
+activity#xyz.godi.popularmovies.ui.FavoritesActivity
+ADDED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml:33:9-37:20
+	android:parentActivityName
+		ADDED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml:35:13-58
+	android:label
+		ADDED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml:34:13-41
+	android:name
+		ADDED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml:33:19-55
 uses-sdk
 INJECTED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/AndroidManifest.xml

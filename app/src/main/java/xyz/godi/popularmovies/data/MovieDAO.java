@@ -23,8 +23,8 @@ public interface MovieDAO {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     void insert(Movie movie);
 
-    @Query("SELECT id FROM Movie Where id = :id")
-    FavoriteMovie getMovieById(String id);
+    @Query("SELECT * FROM Movie Where id = :id")
+    Movie getMovieById(int id);
 
     @Delete
     void delete(Movie movie);

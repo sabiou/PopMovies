@@ -56,5 +56,6 @@
     <string name="trailers_text">Trailers</string>
     <string name="review_text">Reviews</string>
     <string name="network_error">Error while receiving data from server</string>
+    <string name="favorites">Favorites</string>
 
 </resources>

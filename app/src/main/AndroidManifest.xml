@@ -23,15 +23,18 @@
         </activity>
         <activity
             android:name=".ui.DetailsActivity"
-            android:parentActivityName=".ui.MainActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-
-        <activity android:name=".ui.AboutActivity"
+        <activity
+            android:name=".ui.AboutActivity"
             android:label="About"
             android:parentActivityName=".ui.MainActivity">
 
         </activity>
+        <activity android:name=".ui.FavoritesActivity"
+            android:label="My Favorites"
+            android:parentActivityName=".ui.MainActivity">
 
+        </activity>
     </application>
 
 </manifest>

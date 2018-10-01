@@ -40,7 +40,7 @@ import xyz.godi.popularmovies.api.RetrofitClient;
 import xyz.godi.popularmovies.api.Service;
 import xyz.godi.popularmovies.viewModel.MovieViewModel;
 import xyz.godi.popularmovies.model.Movie;
-import xyz.godi.popularmovies.ui.adapters.MovieAdapter;
+import xyz.godi.popularmovies.adapters.MovieAdapter;
 import xyz.godi.popularmovies.utils.Config;
 
 public class MainActivity extends AppCompatActivity {
@@ -49,9 +49,6 @@ public class MainActivity extends AppCompatActivity {
 
     // Shared Preferences to save sort settings
     SharedPreferences mSharedPref;
-
-    private MovieAdapter movieAdapter;
-    private MovieViewModel movieViewModel;
 
     // Bind views using ButterKnife
     @BindView(R.id.mainLayout) FrameLayout homeLayout;
@@ -71,9 +68,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
-
-        // get viewModel from ViewModelProviders class
-        movieViewModel = ViewModelProviders.of(this).get(MovieViewModel.class);
 
         // set layout manager
         movie_recycler.setLayoutManager(new GridLayoutManager(this, getSpanCount()));
@@ -132,7 +126,8 @@ public class MainActivity extends AppCompatActivity {
                     // hide the loading indicator
                     loading_spinner.setVisibility(View.INVISIBLE);
                 } else {
-                    Snackbar.make(homeLayout,R.string.network_error,Snackbar.LENGTH_SHORT).show();
+                    Snackbar.make(homeLayout,
+                            R.string.network_error,Snackbar.LENGTH_SHORT).show();
                 }
             }
 
@@ -158,23 +153,14 @@ public class MainActivity extends AppCompatActivity {
                     // hide the loading indicator
                     loading_spinner.setVisibility(View.INVISIBLE);
                 } else {
-                    Snackbar.make(homeLayout,R.string.network_error,Snackbar.LENGTH_SHORT).show();
+                    Snackbar.make(homeLayout,
+                            R.string.network_error,Snackbar.LENGTH_SHORT).show();
                 }
             }
 
             @Override
             public void onFailure(Call<ApiResponse<Movie>> call, Throwable t) {
                 Log.e(LOG_TAG, t.getMessage());
-            }
-        });
-    }
-
-    private void loadFavorites() {
-        movieViewModel.getAllMovies().observe(this, new Observer<List<Movie>>() {
-            @Override
-            public void onChanged(@Nullable List<Movie> movies) {
-                // update from cahed data
-                movie_recycler.setAdapter(new MovieAdapter(getApplicationContext(),movies));
             }
         });
     }
@@ -201,6 +187,9 @@ public class MainActivity extends AppCompatActivity {
 
         } else if (itemId == R.id.sort) {
             showSortDialog();
+        } else if (itemId == R.id.favorites) {
+            Intent intent = new Intent(this,FavoritesActivity.class);
+            startActivity(intent);
         }
         return super.onOptionsItemSelected(item);
 
@@ -208,7 +197,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void showSortDialog() {
         // options to display in dialog
-        String[] sortOptions = {"Popular", "Top rated", "Favorites"};
+        String[] sortOptions = {"Popular", "Top rated"};
 
         //  Create alert dialog
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -222,10 +211,7 @@ public class MainActivity extends AppCompatActivity {
                             loadPopularMovies();
                         } else if (which == 1) {
                             loadTopRatedMovies();
-                        } else if (which == 2) {
-                            loadFavorites();
                         }
-                        loadTopRatedMovies();
                     }
                 }).show(); // show the alert dialog
     }

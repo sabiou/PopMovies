@@ -31,11 +31,15 @@
         </activity>
         <activity
             android:name="xyz.godi.popularmovies.ui.DetailsActivity"
-            android:parentActivityName="xyz.godi.popularmovies.ui.MainActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name="xyz.godi.popularmovies.ui.AboutActivity"
             android:label="About"
+            android:parentActivityName="xyz.godi.popularmovies.ui.MainActivity" >
+        </activity>
+        <activity
+            android:name="xyz.godi.popularmovies.ui.FavoritesActivity"
+            android:label="My Favorites"
             android:parentActivityName="xyz.godi.popularmovies.ui.MainActivity" >
         </activity>
 

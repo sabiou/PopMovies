@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.os.Parcelable;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.CoordinatorLayout;
@@ -12,18 +11,15 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.ShareCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.squareup.picasso.Picasso;
 
@@ -40,11 +36,12 @@ import xyz.godi.popularmovies.api.ApiResponse;
 import xyz.godi.popularmovies.api.RetrofitClient;
 import xyz.godi.popularmovies.api.Service;
 import xyz.godi.popularmovies.data.MovieDataBase;
+import xyz.godi.popularmovies.model.FavoriteMovie;
 import xyz.godi.popularmovies.model.Movie;
 import xyz.godi.popularmovies.model.Review;
 import xyz.godi.popularmovies.model.Video;
-import xyz.godi.popularmovies.ui.adapters.ReviewAdapter;
-import xyz.godi.popularmovies.ui.adapters.TrailerAdapter;
+import xyz.godi.popularmovies.adapters.ReviewAdapter;
+import xyz.godi.popularmovies.adapters.TrailerAdapter;
 import xyz.godi.popularmovies.utils.AppBarStateChangeListener;
 import xyz.godi.popularmovies.utils.Config;
 import xyz.godi.popularmovies.utils.ConstantsUtils;
@@ -83,7 +80,8 @@ public class DetailsActivity extends AppCompatActivity {
     RecyclerView reviewsRecycler;
     @BindView(R.id.favoriteButton)
     FloatingActionButton favouriteButton;
-    // our Movie object
+
+    // some us
     private Movie movie;
     private TrailerAdapter trailerAdapter;
     private ReviewAdapter reviewAdapter;
@@ -112,7 +110,7 @@ public class DetailsActivity extends AppCompatActivity {
         favouriteButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onFavoriteClicked(savedInstanceState);
+                onFavoriteClicked();
             }
         });
 
@@ -175,6 +173,22 @@ public class DetailsActivity extends AppCompatActivity {
 
             // set movie overview
             movie_description.setText(movie.getOverview());
+
+            executor.execute(new Runnable() {
+                @Override
+                public void run() {
+
+                    Movie movie1 = movieDb.movieDAO().getMovieById(movie.getId());
+
+                    if (movie1 != null) {
+                        isFavorite = true;
+                        favouriteButton.setImageResource(R.drawable.ic_favorite_added);
+                    } else {
+                        isFavorite = false;
+                        favouriteButton.setImageResource(R.drawable.ic_favorite_border);
+                    }
+                }
+            });
         }
     }
 
@@ -262,40 +276,36 @@ public class DetailsActivity extends AppCompatActivity {
     /**
      * Add Movie to favorite or remove it from
      */
-    public void onFavoriteClicked(Bundle savedInstance) {
+    public void onFavoriteClicked() {
         // snackBar text
         String snackBarText;
 
-        if (savedInstance != null && savedInstance.containsKey(Movie.TAG)) {
-            reviewAdapter.setItems(savedInstance.<Review>getParcelableArrayList(Movie.TAG));
-        } else {
-            // if the movie already exist
-            if (isFavorite) {
-                executor.execute(new Runnable() {
-                    @Override
-                    public void run() {
-                        movieDb.movieDAO().delete(movie);
-                    }
-                });
-                isFavorite = false;
+        // if the movie already exist
+        if (isFavorite) {
+            executor.execute(new Runnable() {
+                @Override
+                public void run() {
+                    movieDb.movieDAO().delete(movie);
+                }
+            });
+            isFavorite = false;
 
-                // set favorite removed icon
-                favouriteButton.setImageResource(R.drawable.ic_favorite_border);
-                snackBarText = getString(R.string.favorite_removed);
-            } else {
-                executor.execute(new Runnable() {
-                    @Override
-                    public void run() {
-                        movieDb.movieDAO().insert(movie);
-                    }
-                });
-                isFavorite = true;
-                // set favorite added icon
-                favouriteButton.setImageResource(R.drawable.ic_favorite_added);
-                snackBarText = getString(R.string.favorite_added);
-            }
-            Snackbar.make(coordinatorLayout, snackBarText, Snackbar.LENGTH_SHORT).show();
+            // set favorite removed icon
+            favouriteButton.setImageResource(R.drawable.ic_favorite_border);
+            snackBarText = getString(R.string.favorite_removed);
+        } else {
+            executor.execute(new Runnable() {
+                @Override
+                public void run() {
+                    movieDb.movieDAO().insert(movie);
+                }
+            });
+            isFavorite = true;
+            // set favorite added icon
+            favouriteButton.setImageResource(R.drawable.ic_favorite_added);
+            snackBarText = getString(R.string.favorite_added);
         }
+        Snackbar.make(coordinatorLayout, snackBarText, Snackbar.LENGTH_SHORT).show();
     }
 
     @Override

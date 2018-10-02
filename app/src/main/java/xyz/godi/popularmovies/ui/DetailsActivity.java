@@ -229,7 +229,6 @@ public class DetailsActivity extends AppCompatActivity {
 
                 @Override
                 public void onFailure(Call<ApiResponse<Video>> call, Throwable t) {
-                    // TODO TO BE IMPLEMENTED
                 }
             });
         }
@@ -268,7 +267,6 @@ public class DetailsActivity extends AppCompatActivity {
 
                 @Override
                 public void onFailure(Call<ApiResponse<Review>> call, Throwable t) {
-                    // TODO : SHUT UP THE FUCK
                 }
             });
         }

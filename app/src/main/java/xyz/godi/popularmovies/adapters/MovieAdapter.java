@@ -46,7 +46,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHol
 
         @Override
         public void onClick(View v) {
-            // TODO: 8/1/18 Start DetailsActivity
+            // Start DetailsActivity
             Intent intent = new Intent(v.getContext(), DetailsActivity.class);
             Movie currentMovie = movies.get(getAdapterPosition());
             intent.putExtra(Movie.TAG, currentMovie);

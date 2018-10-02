@@ -57,5 +57,6 @@
     <string name="review_text">Reviews</string>
     <string name="network_error">Error while receiving data from server</string>
     <string name="favorites">Favorites</string>
+    <string name="no_favorites_text">No favorites added yet</string>
 
 </resources>

@@ -4,16 +4,16 @@
         "source": "/home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/res/drawable/ic_cloud_off.xml"
     },
     {
-        "merged": "/home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/build/intermediates/res/merged/debug/anim_abc_fade_out.xml.flat",
-        "source": "/home/farouk/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/ad2e92f1432bf95d5e7eed837e22ca02/res/anim/abc_fade_out.xml"
+        "merged": "/home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_menu_hardkey_panel_mtrl_mult.9.png.flat",
+        "source": "/home/farouk/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/ad2e92f1432bf95d5e7eed837e22ca02/res/drawable-xhdpi-v4/abc_menu_hardkey_panel_mtrl_mult.9.png"
     },
     {
         "merged": "/home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_text_select_handle_right_mtrl_dark.png.flat",
         "source": "/home/farouk/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/ad2e92f1432bf95d5e7eed837e22ca02/res/drawable-xxxhdpi-v4/abc_text_select_handle_right_mtrl_dark.png"
     },
     {
-        "merged": "/home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_menu_hardkey_panel_mtrl_mult.9.png.flat",
-        "source": "/home/farouk/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/ad2e92f1432bf95d5e7eed837e22ca02/res/drawable-xhdpi-v4/abc_menu_hardkey_panel_mtrl_mult.9.png"
+        "merged": "/home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/build/intermediates/res/merged/debug/anim_abc_fade_out.xml.flat",
+        "source": "/home/farouk/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/ad2e92f1432bf95d5e7eed837e22ca02/res/anim/abc_fade_out.xml"
     },
     {
         "merged": "/home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_notify_panel_notification_icon_bg.png.flat",
@@ -52,12 +52,12 @@
         "source": "/home/farouk/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/ad2e92f1432bf95d5e7eed837e22ca02/res/drawable-xxhdpi-v4/abc_list_pressed_holo_light.9.png"
     },
     {
-        "merged": "/home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_list_longpressed_holo.9.png.flat",
-        "source": "/home/farouk/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/ad2e92f1432bf95d5e7eed837e22ca02/res/drawable-mdpi-v4/abc_list_longpressed_holo.9.png"
-    },
-    {
         "merged": "/home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_ic_star_half_black_36dp.png.flat",
         "source": "/home/farouk/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/ad2e92f1432bf95d5e7eed837e22ca02/res/drawable-xhdpi-v4/abc_ic_star_half_black_36dp.png"
+    },
+    {
+        "merged": "/home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_list_longpressed_holo.9.png.flat",
+        "source": "/home/farouk/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/ad2e92f1432bf95d5e7eed837e22ca02/res/drawable-mdpi-v4/abc_list_longpressed_holo.9.png"
     },
     {
         "merged": "/home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/build/intermediates/res/merged/debug/color_abc_secondary_text_material_dark.xml.flat",
@@ -80,12 +80,12 @@
         "source": "/home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
     },
     {
-        "merged": "/home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/build/intermediates/res/merged/debug/drawable-v21_abc_btn_colored_material.xml.flat",
-        "source": "/home/farouk/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/ad2e92f1432bf95d5e7eed837e22ca02/res/drawable-v21/abc_btn_colored_material.xml"
-    },
-    {
         "merged": "/home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_list_focused_holo.9.png.flat",
         "source": "/home/farouk/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/ad2e92f1432bf95d5e7eed837e22ca02/res/drawable-hdpi-v4/abc_list_focused_holo.9.png"
+    },
+    {
+        "merged": "/home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/build/intermediates/res/merged/debug/drawable-v21_abc_btn_colored_material.xml.flat",
+        "source": "/home/farouk/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/ad2e92f1432bf95d5e7eed837e22ca02/res/drawable-v21/abc_btn_colored_material.xml"
     },
     {
         "merged": "/home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_scrubber_primary_mtrl_alpha.9.png.flat",
@@ -164,24 +164,24 @@
         "source": "/home/farouk/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/ad2e92f1432bf95d5e7eed837e22ca02/res/drawable-mdpi-v4/abc_list_focused_holo.9.png"
     },
     {
-        "merged": "/home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/build/intermediates/res/merged/debug/layout_design_navigation_item_separator.xml.flat",
-        "source": "/home/farouk/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/7d3c8921b01ee3db628fba8dffb749f6/res/layout/design_navigation_item_separator.xml"
-    },
-    {
         "merged": "/home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/build/intermediates/res/merged/debug/layout_design_layout_snackbar.xml.flat",
         "source": "/home/farouk/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/7d3c8921b01ee3db628fba8dffb749f6/res/layout/design_layout_snackbar.xml"
+    },
+    {
+        "merged": "/home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/build/intermediates/res/merged/debug/layout_design_navigation_item_separator.xml.flat",
+        "source": "/home/farouk/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/7d3c8921b01ee3db628fba8dffb749f6/res/layout/design_navigation_item_separator.xml"
     },
     {
         "merged": "/home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/build/intermediates/res/merged/debug/layout_design_navigation_menu.xml.flat",
         "source": "/home/farouk/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/7d3c8921b01ee3db628fba8dffb749f6/res/layout/design_navigation_menu.xml"
     },
     {
-        "merged": "/home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/build/intermediates/res/merged/debug/raw_isc_summary.txt.flat",
-        "source": "/home/farouk/.gradle/caches/transforms-1/files-1.1/licensesdialog-1.8.3.aar/bddcd827e94426802b27193178980aa4/res/raw/isc_summary.txt"
-    },
-    {
         "merged": "/home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/build/intermediates/res/merged/debug/layout_notification_template_media_custom.xml.flat",
         "source": "/home/farouk/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/3d9ca03d5a252dfebc3c5def70bed48b/res/layout/notification_template_media_custom.xml"
+    },
+    {
+        "merged": "/home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/build/intermediates/res/merged/debug/raw_isc_summary.txt.flat",
+        "source": "/home/farouk/.gradle/caches/transforms-1/files-1.1/licensesdialog-1.8.3.aar/bddcd827e94426802b27193178980aa4/res/raw/isc_summary.txt"
     },
     {
         "merged": "/home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_scrubber_control_off_mtrl_alpha.png.flat",
@@ -208,20 +208,20 @@
         "source": "/home/farouk/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/ad2e92f1432bf95d5e7eed837e22ca02/res/drawable-hdpi-v4/abc_ic_menu_paste_mtrl_am_alpha.png"
     },
     {
-        "merged": "/home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_menu_hardkey_panel_mtrl_mult.9.png.flat",
-        "source": "/home/farouk/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/ad2e92f1432bf95d5e7eed837e22ca02/res/drawable-mdpi-v4/abc_menu_hardkey_panel_mtrl_mult.9.png"
-    },
-    {
         "merged": "/home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/build/intermediates/res/merged/debug/drawable_abc_ic_voice_search_api_material.xml.flat",
         "source": "/home/farouk/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/ad2e92f1432bf95d5e7eed837e22ca02/res/drawable/abc_ic_voice_search_api_material.xml"
     },
     {
-        "merged": "/home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/build/intermediates/res/merged/debug/raw_asl_20_full.txt.flat",
-        "source": "/home/farouk/.gradle/caches/transforms-1/files-1.1/licensesdialog-1.8.3.aar/bddcd827e94426802b27193178980aa4/res/raw/asl_20_full.txt"
+        "merged": "/home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_menu_hardkey_panel_mtrl_mult.9.png.flat",
+        "source": "/home/farouk/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/ad2e92f1432bf95d5e7eed837e22ca02/res/drawable-mdpi-v4/abc_menu_hardkey_panel_mtrl_mult.9.png"
     },
     {
         "merged": "/home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher_round.png.flat",
         "source": "/home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/build/intermediates/res/merged/debug/raw_asl_20_full.txt.flat",
+        "source": "/home/farouk/.gradle/caches/transforms-1/files-1.1/licensesdialog-1.8.3.aar/bddcd827e94426802b27193178980aa4/res/raw/asl_20_full.txt"
     },
     {
         "merged": "/home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
@@ -332,12 +332,12 @@
         "source": "/home/farouk/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/ad2e92f1432bf95d5e7eed837e22ca02/res/layout/abc_alert_dialog_material.xml"
     },
     {
-        "merged": "/home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_scrubber_track_mtrl_alpha.9.png.flat",
-        "source": "/home/farouk/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/ad2e92f1432bf95d5e7eed837e22ca02/res/drawable-mdpi-v4/abc_scrubber_track_mtrl_alpha.9.png"
-    },
-    {
         "merged": "/home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_ic_star_half_black_36dp.png.flat",
         "source": "/home/farouk/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/ad2e92f1432bf95d5e7eed837e22ca02/res/drawable-xxhdpi-v4/abc_ic_star_half_black_36dp.png"
+    },
+    {
+        "merged": "/home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_scrubber_track_mtrl_alpha.9.png.flat",
+        "source": "/home/farouk/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/ad2e92f1432bf95d5e7eed837e22ca02/res/drawable-mdpi-v4/abc_scrubber_track_mtrl_alpha.9.png"
     },
     {
         "merged": "/home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/build/intermediates/res/merged/debug/layout_abc_alert_dialog_button_bar_material.xml.flat",
@@ -376,12 +376,12 @@
         "source": "/home/farouk/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/ad2e92f1432bf95d5e7eed837e22ca02/res/drawable-ldrtl-xxxhdpi-v17/abc_ic_menu_copy_mtrl_am_alpha.png"
     },
     {
-        "merged": "/home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_text_select_handle_middle_mtrl_dark.png.flat",
-        "source": "/home/farouk/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/ad2e92f1432bf95d5e7eed837e22ca02/res/drawable-mdpi-v4/abc_text_select_handle_middle_mtrl_dark.png"
-    },
-    {
         "merged": "/home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/build/intermediates/res/merged/debug/layout_design_navigation_item_header.xml.flat",
         "source": "/home/farouk/.gradle/caches/transforms-1/files-1.1/design-27.1.1.aar/7d3c8921b01ee3db628fba8dffb749f6/res/layout/design_navigation_item_header.xml"
+    },
+    {
+        "merged": "/home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_text_select_handle_middle_mtrl_dark.png.flat",
+        "source": "/home/farouk/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/ad2e92f1432bf95d5e7eed837e22ca02/res/drawable-mdpi-v4/abc_text_select_handle_middle_mtrl_dark.png"
     },
     {
         "merged": "/home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_list_divider_mtrl_alpha.9.png.flat",
@@ -404,12 +404,12 @@
         "source": "/home/farouk/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/ad2e92f1432bf95d5e7eed837e22ca02/res/layout/abc_action_bar_title_item.xml"
     },
     {
-        "merged": "/home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_scrubber_control_to_pressed_mtrl_005.png.flat",
-        "source": "/home/farouk/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/ad2e92f1432bf95d5e7eed837e22ca02/res/drawable-xxxhdpi-v4/abc_scrubber_control_to_pressed_mtrl_005.png"
-    },
-    {
         "merged": "/home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/build/intermediates/res/merged/debug/layout-watch-v20_abc_alert_dialog_button_bar_material.xml.flat",
         "source": "/home/farouk/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/ad2e92f1432bf95d5e7eed837e22ca02/res/layout-watch-v20/abc_alert_dialog_button_bar_material.xml"
+    },
+    {
+        "merged": "/home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_scrubber_control_to_pressed_mtrl_005.png.flat",
+        "source": "/home/farouk/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/ad2e92f1432bf95d5e7eed837e22ca02/res/drawable-xxxhdpi-v4/abc_scrubber_control_to_pressed_mtrl_005.png"
     },
     {
         "merged": "/home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_list_pressed_holo_dark.9.png.flat",

@@ -10,6 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -34,7 +35,7 @@ public class FavoritesActivity extends AppCompatActivity {
     // Bind views using ButterKnife
     @BindView(R.id.movierecycler)
     RecyclerView movie_recycler;
-    @BindView(R.id.empty)
+    @BindView(R.id.empty_favorites)
     TextView emptyView_tv;
     @BindView(R.id.no_internet)
     ImageView no_internet_iv;

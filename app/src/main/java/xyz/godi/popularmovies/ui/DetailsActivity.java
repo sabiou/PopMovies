@@ -107,6 +107,7 @@ public class DetailsActivity extends AppCompatActivity {
         Intent intent = getIntent();
         movie = intent.getParcelableExtra(Movie.TAG);
 
+        // when the favorite button is clicked
         favouriteButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -318,7 +319,7 @@ public class DetailsActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         if (id == R.id.share_menu) {
-            shareMovie(movie.getOriginal_title() + " is trending now ! " + "\n" + "Overview : " +
+            shareMovie(movie.getOriginal_title() + " is trending now ! " + "\n" + "Read overview : " +
                     movie.getOverview() + "\n" + SHARE_TAG);
             return true;
         }

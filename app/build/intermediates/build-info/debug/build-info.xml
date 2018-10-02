@@ -2,26 +2,27 @@
 <instant-run
     abi="armeabi-v7a,armeabi"
     api-level="21"
-    build-mode="FULL"
+    build-mode="COLD"
     density="xxhdpi"
     format="10"
+    ir-eligibility="FIELD_REMOVED"
     plugin-version="3.1.1"
-    timestamp="1538358223809"
+    timestamp="1538439526410"
     token="3183082352920227347"
-    verifier="FULL_BUILD_REQUESTED" >
+    verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="0" />
+        duration="4253" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="0" />
+        duration="213" />
     <task
         name="verifier"
-        duration="0" />
+        duration="32" />
 
     <artifact
         location="/home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
@@ -29,40 +30,10 @@
     <artifact
         location="/home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
         type="SPLIT_MAIN" />
-    <artifact
-        location="/home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
-        type="SPLIT" />
-    <artifact
-        location="/home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
-        type="SPLIT" />
-    <artifact
-        location="/home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
-        type="SPLIT" />
-    <artifact
-        location="/home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
-        type="SPLIT" />
-    <artifact
-        location="/home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
-        type="SPLIT" />
-    <artifact
-        location="/home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
-        type="SPLIT" />
-    <artifact
-        location="/home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
-        type="SPLIT" />
-    <artifact
-        location="/home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
-        type="SPLIT" />
-    <artifact
-        location="/home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
-        type="SPLIT" />
-    <artifact
-        location="/home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
-        type="SPLIT" />
 
     <build
         build-mode="FULL"
-        timestamp="1538358223809"
+        timestamp="1538439400910"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="/home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
@@ -100,6 +71,18 @@
         <artifact
             location="/home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
             type="SPLIT" />
+    </build>
+    <build
+        build-mode="COLD"
+        ir-eligibility="FIELD_REMOVED"
+        timestamp="1538439526410"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="/home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/farouk/Bureau/Android Developer Nanodegree/PopularMovies-2/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
+            type="SPLIT_MAIN" />
     </build>
 
 </instant-run>

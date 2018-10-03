@@ -4,7 +4,6 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.res.Configuration;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
@@ -16,6 +15,7 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
         // set layout manager
-        layoutManager = new GridLayoutManager(this, getSpanCount());
+        layoutManager = new GridLayoutManager(this, calculateNoOfColumns(this));
         movie_recycler.setLayoutManager(layoutManager);
 
         // Get reference to Connectivity manager to check for network stat
@@ -106,13 +106,17 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    // check if the device is in landscape mode
-    private int getSpanCount() {
-        if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
-            return 4;
-        }
-        return 3;
+    // calculate number of columns according to screen orientation
+    public static int calculateNoOfColumns(Context context) {
+        DisplayMetrics displayMetrics = context.getResources().getDisplayMetrics();
+        float dpWidth = displayMetrics.widthPixels / displayMetrics.density;
+        int scalingFactor = 200;
+        int noOfColumns = (int) (dpWidth / scalingFactor);
+        if(noOfColumns < 2)
+            noOfColumns = 2;
+        return noOfColumns;
     }
+
 
     // Method to load movies
     private void loadPopularMovies() {

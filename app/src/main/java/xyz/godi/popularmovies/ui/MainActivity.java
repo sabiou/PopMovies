@@ -1,7 +1,5 @@
 package xyz.godi.popularmovies.ui;
 
-import android.arch.lifecycle.Observer;
-import android.arch.lifecycle.ViewModelProviders;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -11,7 +9,7 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.annotation.Nullable;
+import android.os.Parcelable;
 import android.support.design.widget.Snackbar;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AlertDialog;
@@ -35,20 +33,24 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import xyz.godi.popularmovies.R;
+import xyz.godi.popularmovies.adapters.MovieAdapter;
 import xyz.godi.popularmovies.api.ApiResponse;
 import xyz.godi.popularmovies.api.RetrofitClient;
 import xyz.godi.popularmovies.api.Service;
-import xyz.godi.popularmovies.viewModel.MovieViewModel;
 import xyz.godi.popularmovies.model.Movie;
-import xyz.godi.popularmovies.adapters.MovieAdapter;
 import xyz.godi.popularmovies.utils.Config;
 
 public class MainActivity extends AppCompatActivity {
 
     private static final String LOG_TAG = MainActivity.class.getSimpleName();
 
+    public static final String LIST_STATE_KEY = "recycler_key";
+    Parcelable state;
+
     // Shared Preferences to save sort settings
     SharedPreferences mSharedPref;
+    // layout manager instance
+    GridLayoutManager layoutManager;
 
     // Bind views using ButterKnife
     @BindView(R.id.mainLayout) FrameLayout homeLayout;
@@ -70,7 +72,8 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
         // set layout manager
-        movie_recycler.setLayoutManager(new GridLayoutManager(this, getSpanCount()));
+        layoutManager = new GridLayoutManager(this, getSpanCount());
+        movie_recycler.setLayoutManager(layoutManager);
 
         // Get reference to Connectivity manager to check for network stat
         ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
@@ -136,6 +139,34 @@ public class MainActivity extends AppCompatActivity {
                 Log.e(LOG_TAG, t.getMessage());
             }
         });
+    }
+
+    // onSaveInstance
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        // save list state
+        state = layoutManager.onSaveInstanceState();
+        outState.putParcelable(LIST_STATE_KEY,state);
+    }
+
+    // onRestore state
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        // retrieve list state
+        if (savedInstanceState != null) {
+            state = savedInstanceState.getParcelable(LIST_STATE_KEY);
+        }
+    }
+
+    // onResume
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (state != null) {
+            layoutManager.onRestoreInstanceState(state);
+        }
     }
 
     // Method to load top rated movies

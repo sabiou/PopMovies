@@ -43,9 +43,8 @@ import xyz.godi.popularmovies.utils.Config;
 public class MainActivity extends AppCompatActivity {
 
     private static final String LOG_TAG = MainActivity.class.getSimpleName();
-
-    public static final String LIST_STATE_KEY = "recycler_key";
-    Parcelable state;
+    private static final String SORT_SELECTED = "selected";
+    private int selected = -1;
 
     // Shared Preferences to save sort settings
     SharedPreferences mSharedPref;
@@ -69,6 +68,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        if (savedInstanceState != null) {
+            selected = savedInstanceState.getInt(SORT_SELECTED);
+        }
+
         ButterKnife.bind(this);
 
         // set layout manager
@@ -149,28 +153,25 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
-        // save list state
-        state = layoutManager.onSaveInstanceState();
-        outState.putParcelable(LIST_STATE_KEY,state);
+        outState.putInt(SORT_SELECTED, selected);
     }
 
     // onRestore state
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
-        // retrieve list state
-        if (savedInstanceState != null) {
-            state = savedInstanceState.getParcelable(LIST_STATE_KEY);
-        }
+        selected = savedInstanceState.getInt(SORT_SELECTED);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
     }
 
     // onResume
     @Override
     protected void onResume() {
         super.onResume();
-        if (state != null) {
-            layoutManager.onRestoreInstanceState(state);
-        }
     }
 
     // Method to load top rated movies
@@ -243,8 +244,10 @@ public class MainActivity extends AppCompatActivity {
                     public void onClick(DialogInterface dialog, int which) {
                         // load movies accordingly to the selected option
                         if (which == 0) {
+                            selected = which;
                             loadPopularMovies();
                         } else if (which == 1) {
+                            selected = which;
                             loadTopRatedMovies();
                         }
                     }

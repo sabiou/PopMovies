@@ -305,7 +305,14 @@ public class DetailsActivity extends AppCompatActivity {
             favouriteButton.setImageResource(R.drawable.ic_favorite_added);
             snackBarText = getString(R.string.favorite_added);
         }
-        Snackbar.make(coordinatorLayout, snackBarText, Snackbar.LENGTH_SHORT).show();
+        Snackbar.make(coordinatorLayout, snackBarText, Snackbar.LENGTH_SHORT)
+                .setAction(R.string.view_favorite, new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(getApplicationContext(),FavoritesActivity.class);
+                        startActivity(intent);
+                    }
+                }).show();
     }
 
     @Override

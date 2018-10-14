@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.CoordinatorLayout;
@@ -51,6 +52,7 @@ import xyz.godi.popularmovies.utils.MovieExec;
 public class DetailsActivity extends AppCompatActivity {
 
     public static final String TAG = DetailsActivity.class.getSimpleName();
+
     // Sharing TAG
     private static final String SHARE_TAG = "#PopularMovieByFarouk";
     // Bind views using ButterKnife
@@ -175,12 +177,11 @@ public class DetailsActivity extends AppCompatActivity {
             // set movie overview
             movie_description.setText(movie.getOverview());
 
+            // check if movie is favorite
             executor.execute(new Runnable() {
                 @Override
                 public void run() {
-
                     Movie movie1 = movieDb.movieDAO().getMovieById(movie.getId());
-
                     if (movie1 != null) {
                         isFavorite = true;
                         favouriteButton.setImageResource(R.drawable.ic_favorite_added);

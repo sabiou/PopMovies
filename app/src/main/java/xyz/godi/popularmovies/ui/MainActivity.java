@@ -1,23 +1,20 @@
 package xyz.godi.popularmovies.ui;
 
-import android.arch.lifecycle.Observer;
-import android.arch.lifecycle.ViewModelProviders;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.res.Configuration;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.annotation.Nullable;
 import android.support.design.widget.Snackbar;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -35,20 +32,23 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import xyz.godi.popularmovies.R;
+import xyz.godi.popularmovies.adapters.MovieAdapter;
 import xyz.godi.popularmovies.api.ApiResponse;
 import xyz.godi.popularmovies.api.RetrofitClient;
 import xyz.godi.popularmovies.api.Service;
-import xyz.godi.popularmovies.viewModel.MovieViewModel;
 import xyz.godi.popularmovies.model.Movie;
-import xyz.godi.popularmovies.adapters.MovieAdapter;
 import xyz.godi.popularmovies.utils.Config;
 
 public class MainActivity extends AppCompatActivity {
 
     private static final String LOG_TAG = MainActivity.class.getSimpleName();
+    private static final String SORT_SELECTED = "selected";
+    private int selected = -1;
 
     // Shared Preferences to save sort settings
     SharedPreferences mSharedPref;
+    // layout manager instance
+    GridLayoutManager layoutManager;
 
     // Bind views using ButterKnife
     @BindView(R.id.mainLayout) FrameLayout homeLayout;
@@ -67,10 +67,16 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        if (savedInstanceState != null) {
+            selected = savedInstanceState.getInt(SORT_SELECTED);
+        }
+
         ButterKnife.bind(this);
 
         // set layout manager
-        movie_recycler.setLayoutManager(new GridLayoutManager(this, getSpanCount()));
+        layoutManager = new GridLayoutManager(this, calculateNoOfColumns(this));
+        movie_recycler.setLayoutManager(layoutManager);
 
         // Get reference to Connectivity manager to check for network stat
         ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
@@ -82,11 +88,9 @@ public class MainActivity extends AppCompatActivity {
         //
         mSharedPref = getSharedPreferences("sortSettings", MODE_PRIVATE);
 
-        String sorting = mSharedPref.getString("sort", "popular");
-
         // if there a network, load movies
         if (networkInfo != null && networkInfo.isConnected()) {
-            loadPopularMovies();
+            loadBySelectedSort(selected);
         } else {
             loading_spinner.setVisibility(View.INVISIBLE);
             no_internet_iv.setVisibility(View.VISIBLE);
@@ -103,13 +107,26 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    // check if the device is in landscape mode
-    private int getSpanCount() {
-        if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
-            return 4;
-        }
-        return 3;
+    // calculate number of columns according to screen orientation
+    public static int calculateNoOfColumns(Context context) {
+        DisplayMetrics displayMetrics = context.getResources().getDisplayMetrics();
+        float dpWidth = displayMetrics.widthPixels / displayMetrics.density;
+        int scalingFactor = 200;
+        int noOfColumns = (int) (dpWidth / scalingFactor);
+        if(noOfColumns < 2)
+            noOfColumns = 2;
+        return noOfColumns;
     }
+
+    // load according to selected sort type
+    private void loadBySelectedSort(int key) {
+        if (key == 1) {
+            loadTopRatedMovies();
+        } else {
+            loadPopularMovies();
+        }
+    }
+
 
     // Method to load movies
     private void loadPopularMovies() {
@@ -136,6 +153,31 @@ public class MainActivity extends AppCompatActivity {
                 Log.e(LOG_TAG, t.getMessage());
             }
         });
+    }
+
+    // onSaveInstance
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putInt(SORT_SELECTED, selected);
+    }
+
+    // onRestore state
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        selected = savedInstanceState.getInt(SORT_SELECTED);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+    }
+
+    // onResume
+    @Override
+    protected void onResume() {
+        super.onResume();
     }
 
     // Method to load top rated movies
@@ -208,8 +250,10 @@ public class MainActivity extends AppCompatActivity {
                     public void onClick(DialogInterface dialog, int which) {
                         // load movies accordingly to the selected option
                         if (which == 0) {
+                            selected = which;
                             loadPopularMovies();
                         } else if (which == 1) {
+                            selected = which;
                             loadTopRatedMovies();
                         }
                     }

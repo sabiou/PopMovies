@@ -9,8 +9,8 @@ NB: You need an API key from [Themoviedb api](https://www.themoviedb.org/) in or
 * [Retrofit](https://square.github.io/retrofit/).
 * [ButterKnife](jakewharton.github.io/butterknife/)
 * [Picasso](square.github.io/picasso/)
-1. Android Architecture components
-- [Room](https://developer.android.com/topic/libraries/architecture/room)
+* Android Architecture components
+  -[Room](https://developer.android.com/topic/libraries/architecture/room)
 
 # Requirements
 * Android Studio

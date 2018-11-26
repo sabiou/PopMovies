@@ -11,6 +11,9 @@ NB: You need an API key from [Themoviedb api](https://www.themoviedb.org/) in or
 * [Picasso](square.github.io/picasso/)
 * Android Architecture components 
   - [Room](https://developer.android.com/topic/libraries/architecture/room)
+  - [LiveData](https://developer.android.com/topic/libraries/architecture/livedata)
+  - [ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel)
+  - [Lifecycle](https://developer.android.com/topic/libraries/architecture/lifecycle)
 
 # Requirements
 * Android Studio

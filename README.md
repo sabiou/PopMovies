@@ -18,3 +18,6 @@ NB: You need an API key from [Themoviedb api](https://www.themoviedb.org/) in or
 # Requirements
 * Android Studio
 * Android SDK & tools version 28
+
+# Contributions 
+Constributions are welcome. Feel free to submit a pull request to contribute to the project.

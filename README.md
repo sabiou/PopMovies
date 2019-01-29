@@ -1,9 +1,11 @@
 # PopularMovies-2
 Third project of Udacity Android Developer Nanodegree.
 
-
-
-NB: You need an API key from [Themoviedb api](https://www.themoviedb.org/) in order to run the app. You'll found where to put your key in the Android Studio TODO tab.
+# How to run the project
+* First get an api key from themoviedb at [TheMovieDb](https://www.themoviedb.org/)
+* Clone the repo or download the code and unzip it anywhere on your computer.
+* Import it in Android Studio.
+* Click on the TODO tab and add your API key in the specified place.
 
 # Librairies Used
 * [Retrofit](https://square.github.io/retrofit/).

@@ -1,27 +1,26 @@
 package xyz.godi.popularmovies.ui;
 
-import android.arch.lifecycle.Observer;
-import android.arch.lifecycle.ViewModelProviders;
 import android.content.res.Configuration;
-import android.os.Handler;
-import android.support.annotation.Nullable;
-import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.view.View;
+import android.os.Handler;
 import android.widget.ImageView;
-import android.widget.ProgressBar;
 import android.widget.TextView;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProviders;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import xyz.godi.popularmovies.R;
-import xyz.godi.popularmovies.model.Movie;
 import xyz.godi.popularmovies.adapters.MovieAdapter;
+import xyz.godi.popularmovies.model.Movie;
 import xyz.godi.popularmovies.viewModel.MovieViewModel;
 
 public class FavoritesActivity extends AppCompatActivity {

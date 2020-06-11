@@ -68,9 +68,6 @@ dependencies {
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
     // Gson
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
-    //ButterKnife
-    implementation 'com.jakewharton:butterknife:10.2.1'
-    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.1'
     // Picasso
     implementation 'com.squareup.picasso:picasso:2.71828'
     // color palette

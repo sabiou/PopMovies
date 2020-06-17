@@ -2,7 +2,6 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 buildscript {
-    val kotlin_version by extra("1.3.72")
     repositories {
         google()
         jcenter()
@@ -19,6 +18,10 @@ buildscript {
     }
 }
 
+plugins {
+    id("com.github.ben-manes.versions").version("0.28.0")
+}
+
 allprojects {
     repositories {
         google()
@@ -31,4 +34,8 @@ allprojects {
             dirs = setOf(file("libs"))
         }
     }
+}
+
+tasks.register("clean", Delete::class) {
+    delete(rootProject.buildDir)
 }

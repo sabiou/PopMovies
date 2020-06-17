@@ -1,4 +1,5 @@
 include(
         ":app",
-        ":depconstraints"
+        ":depconstraints",
+        ":tests"
 )

@@ -14,6 +14,7 @@ object Libs {
     const val COROUTINES = "org.jetbrains.kotlinx:kotlinx-coroutines-core"
     const val COROUTINES_TEST = "org.jetbrains.kotlinx:kotlinx-coroutines-test"
     const val ESPRESSO_CORE = "androidx.test.espresso:espresso-core"
+    const val ESPRESSO_CONTRIB = "androidx.test.espresso:espresso-contrib"
     const val EXT_JUNIT = "androidx.test.ext:junit"
     const val FRAGMENT_KTX = "androidx.fragment:fragment-ktx"
     const val GLIDE = "com.github.bumptech.glide:glide"

@@ -1,0 +1,1 @@
+/home/farouk/AndroidStudioProjects/popular-movies/buildSrc/build/classes/kotlin/main/Libs.class:/home/farouk/AndroidStudioProjects/popular-movies/buildSrc/build/classes/kotlin/main/Versions.class

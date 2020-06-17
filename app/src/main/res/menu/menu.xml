@@ -1,22 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:title="@string/sort_movie"
-        android:id="@+id/sort"
-        android:icon="@drawable/ic_sort_white_24dp"
-        app:showAsAction="ifRoom"/>
+        android:id="@+id/homeFragment"
+        android:icon="@drawable/ic_trailer_24dp"
+        android:title="Home"
+        app:showAsAction="never" />
 
     <item
+        android:id="@+id/favoritesFragment"
+        android:icon="@drawable/ic_favorite_added"
         android:title="@string/favorites"
-        android:id="@+id/favorites"
-        app:showAsAction="never"/>
+        app:showAsAction="never" />
 
     <item
         android:id="@+id/about"
-        android:title="@string/about_app"
+        android:icon="@drawable/ic_info_24"
         android:orderInCategory="100"
-        app:showAsAction="never"/>
+        android:title="@string/about_app"
+        app:showAsAction="never" />
 
 </menu>

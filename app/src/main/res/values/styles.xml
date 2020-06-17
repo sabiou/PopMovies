@@ -1,27 +1,27 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:fontFamily">@font/nunito_sans</item>
+        <item name="android:fontFamily">@font/din_regular</item>
 
     </style>
 
-
-    <style name="AppTheme.NoActionBar">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
+    <style name="RoundedFrameLayoutDefault">
+        <item name="android:topLeftRadius">4dp</item>
+        <item name="android:topRightRadius">4dp</item>
+        <item name="android:bottomRightRadius">4dp</item>
+        <item name="android:bottomLeftRadius">4dp</item>
     </style>
 
-    <style name="AppTheme.PopupOverlay"
-        parent="ThemeOverlay.AppCompat.Light" />
-
-    <style name="RatingBar" parent="Theme.AppCompat">
-        <item name="colorControlNormal">@color/colorGrey600</item>
-        <item name="colorControlActivated">@color/colorGolden</item>
+    <style name="TextStyle" parent="@android:style/Widget.TextView">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">18sp</item>
     </style>
 
 </resources>

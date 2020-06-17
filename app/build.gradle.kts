@@ -15,6 +15,8 @@ android {
         targetSdkVersion(Versions.TARGET_SDK)
         versionName = Versions.VERSION_NAME
 
+        testInstrumentationRunner = "xyz.godi.popularmovies.AppTestRunner"
+
         buildConfigField("String", "API_KEY", properties["api_key"] as String)
 
         vectorDrawables.useSupportLibrary = true
@@ -126,6 +128,13 @@ dependencies {
 
     // whatif
     implementation(Libs.WHATIF)
+
+    // Instrumentation tests
+    androidTestImplementation(Libs.ESPRESSO_CORE)
+    androidTestImplementation(Libs.ESPRESSO_CONTRIB)
+    androidTestImplementation(Libs.EXT_JUNIT)
+    androidTestImplementation(Libs.RUNNER)
+    androidTestImplementation(Libs.RULES)
 
     androidTestImplementation("androidx.test.uiautomator:uiautomator:2.2.0")
     androidTestImplementation("com.google.truth:truth:1.0")

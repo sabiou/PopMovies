@@ -1,8 +1,8 @@
 plugins {
     id("com.android.application")
-    id("kotlin-android")
-    id("kotlin-android-extensions")
-    id("kotlin-kapt")
+    kotlin("android")
+    kotlin("android.extensions")
+    kotlin("kapt")
     id("dagger.hilt.android.plugin")
     id("androidx.navigation.safeargs.kotlin")
 }
@@ -13,7 +13,9 @@ android {
         applicationId = "xyz.godi.popularmovies"
         minSdkVersion(Versions.MIN_SDK)
         targetSdkVersion(Versions.TARGET_SDK)
-        versionName = Versions.versionName
+        versionName = Versions.VERSION_NAME
+
+        buildConfigField("String", "API_KEY", properties["api_key"] as String)
 
         vectorDrawables.useSupportLibrary = true
 
@@ -26,11 +28,12 @@ android {
     buildTypes {
         getByName("release") {
             isMinifyEnabled = true
-            proguardFiles (getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
         }
     }
     buildFeatures {
         dataBinding = true
+        viewBinding = true
     }
 
 
@@ -42,86 +45,88 @@ android {
     // To avoid the compile error: "Cannot inline bytecode built with JVM target 1.8
     // into bytecode that is being built with JVM target 1.6"
     kotlinOptions {
-        val options = this as org.jetbrains.kotlin.gradle.dsl.KotlinJvmOptions
+        val options = this
         options.jvmTarget = "1.8"
     }
 }
 
 
 dependencies {
+    api(platform(project(":depconstraints")))
+    kapt(platform(project(":depconstraints")))
+
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
-    implementation(Libs.APPCOMPAT)
-    implementation(Libs.MATERIAL)
-    implementation(Libs.APPCOMPAT)
-    implementation(Libs.CARDVIEW)
-    implementation(Libs.VECTOR_DRAWABLES)
     // Kotlin ktx
     implementation(Libs.CORE_KTX)
+    // Kotlin
+    implementation(Libs.KOTLIN_STDLIB)
+
+    // UI
+    implementation(Libs.ACTIVITY_KTX)
+    implementation(Libs.APPCOMPAT)
+    implementation(Libs.FRAGMENT_KTX)
+    implementation(Libs.CARDVIEW)
+    implementation(Libs.CONSTRAINT_LAYOUT)
+    implementation(Libs.MATERIAL)
+    implementation(Libs.VECTOR_DRAWABLES)
+    implementation(Libs.RECYCLER_VIEW)
+    implementation(Libs.SWIPE_REFRESH)
 
     // Android JetPack
-    implementation ("androidx.fragment:fragment-ktx:1.2.5")
-    implementation ("androidx.lifecycle:lifecycle-runtime:2.2.0")
-    implementation ("androidx.lifecycle:lifecycle-viewmodel:2.2.0")
-    implementation ("androidx.lifecycle:lifecycle-extensions:2.2.0")
-    implementation ("androidx.lifecycle:lifecycle-livedata-ktx:2.2.0")
-    implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0")
-    implementation ("androidx.room:room-runtime:2.2.5")
-    implementation ("androidx.room:room-ktx:2.2.5")
-    implementation ("androidx.navigation:navigation-fragment-ktx:2.2.2")
-    implementation ("androidx.navigation:navigation-ui-ktx:2.2.2")
-    kapt ("androidx.room:room-compiler:2.2.5")
-    testImplementation ("androidx.room:room-testing:2.2.5")
+    implementation(Libs.NAVIGATION_FRAGMENT_KTX)
+    implementation(Libs.LIFECYCLE_LIVE_DATA_KTX)
+    implementation(Libs.LIFECYCLE_VIEW_MODEL_KTX)
+    kapt(Libs.LIFECYCLE_COMPILER)
+    implementation(Libs.ROOM_RUNTIME)
+    implementation(Libs.ROOM_KTX)
+    implementation(Libs.NAVIGATION_UI_KTX)
+    kapt(Libs.ROOM_COMPILER)
+    testImplementation(Libs.ARCH_TESTING)
 
-    implementation ("androidx.legacy:legacy-support-v4:1.0.0")
-    testImplementation ("junit:junit:4.13")
+    // Dagger Hilt
+    implementation(Libs.HILT_ANDROID)
+    implementation(Libs.HILT_VIEWMODEL)
+    androidTestImplementation(Libs.HILT_TESTING)
+    kapt(Libs.HILT_COMPILER)
+    kapt(Libs.ANDROIDX_HILT_COMPILER)
+    kaptAndroidTest(Libs.HILT_COMPILER)
+    kaptAndroidTest(Libs.ANDROIDX_HILT_COMPILER)
 
-    // retrofit
-    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
-    // Gson
-    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
-    // Picasso
-    implementation ("com.squareup.picasso:picasso:2.71828")
+    // Retrofit
+    implementation(Libs.RETROFIT)
+    implementation(Libs.RETROFIT_GSON)
+
+    // Local unit tests
+    testImplementation(Libs.JUNIT)
+    testImplementation(Libs.HAMCREST)
+
+    // unit tests livedata
+    testImplementation(Libs.ARCH_TESTING)
+
+    // Sandwich
+    implementation(Libs.SANDWICH)
+
+    // Google Gson
+    implementation(Libs.GSON)
+
+    // Glide
+    implementation(Libs.GLIDE)
+    kapt(Libs.GLIDE_COMPILER)
+
     // color palette
-    implementation ("androidx.palette:palette:1.0.0")
+    implementation("androidx.palette:palette:1.0.0")
     // Licences dialog
     implementation("de.psdev.licensesdialog:licensesdialog:2.1.0")
 
-    // dagger
-    implementation ("com.google.dagger:dagger:2.28")
-    implementation ("com.google.dagger:hilt-android:2.28-alpha")
-    implementation ("com.google.dagger:hilt-android-testing:2.28-alpha")
-    implementation ("androidx.hilt:hilt-common:1.0.0-alpha01")
-    implementation ("androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha01")
-    kapt ("com.google.dagger:dagger-compiler:2.28")
-    kapt ("com.google.dagger:hilt-android-compiler:2.28-alpha")
-    kapt ("androidx.hilt:hilt-compiler:1.0.0-alpha01")
-    androidTestImplementation ("com.google.dagger:hilt-android-testing:2.28-alpha")
-    kaptAndroidTest ("com.google.dagger:hilt-android-compiler:2.28-alpha")
-
     // adapter
-    implementation ("com.github.skydoves:baserecyclerviewadapter:0.1.3")
+    implementation(Libs.BASE_RECYCLER_ADAPTER)
 
     // transformation
-    implementation ("com.github.skydoves:transformationlayout:1.0.4")
+    implementation(Libs.TRANSFORMATION_LAYOUT)
 
     // whatif
-    implementation ("com.github.skydoves:whatif:1.0.4")
+    implementation(Libs.WHATIF)
 
-    // sandwich
-    implementation ("com.github.skydoves:sandwich:1.0.1")
-
-    // Glide
-    implementation ("com.github.bumptech.glide:glide:4.11.0")
-    kapt ("com.github.bumptech.glide:compiler:4.11.0")
-
-    // test
-    androidTestImplementation ("androidx.arch.core:core-testing:2.1.0")
-    androidTestImplementation ("androidx.test.espresso:espresso-contrib:3.2.0")
-    androidTestImplementation ("androidx.test.espresso:espresso-core:3.2.0")
-    androidTestImplementation ("androidx.test.espresso:espresso-intents:3.2.0")
-    androidTestImplementation ("androidx.test.ext:junit:1.1.1")
-    androidTestImplementation ("androidx.test.uiautomator:uiautomator:2.2.0")
-    androidTestImplementation ("androidx.work:work-testing:2.3.4")
-    androidTestImplementation ("com.google.truth:truth:1.0")
-    testImplementation ("junit:junit:4.13")
+    androidTestImplementation("androidx.test.uiautomator:uiautomator:2.2.0")
+    androidTestImplementation("com.google.truth:truth:1.0")
 }

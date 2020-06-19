@@ -15,7 +15,7 @@ class TmdbClient @Inject constructor(
             page: Int,
             onResult: (response: ApiResponse<MovieResponse>) -> Unit
     ) {
-        tmdbService.fetchMoviesList(
+        tmdbService.fetchPopularMoviesList(
                 limit = pagingSize,
                 offset = page * pagingSize
         ).request(onResult)

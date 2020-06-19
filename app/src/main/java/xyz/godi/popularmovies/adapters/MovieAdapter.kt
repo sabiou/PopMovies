@@ -9,7 +9,7 @@ import xyz.godi.popularmovies.adapters.MovieAdapter.MovieViewHolder
 import xyz.godi.popularmovies.databinding.MovieItemBinding
 import xyz.godi.popularmovies.model.Movie
 
-class MovieAdapter() : RecyclerView.Adapter<MovieAdapter.MovieViewHolder>() {
+class MovieAdapter : RecyclerView.Adapter<MovieViewHolder>() {
 
     private val items: MutableList<Movie> = mutableListOf()
 

@@ -7,6 +7,7 @@ import dagger.hilt.android.components.ApplicationComponent
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import xyz.godi.popularmovies.BuildConfig
 import xyz.godi.popularmovies.network.HttpRequestInterceptor
 import xyz.godi.popularmovies.network.TmdbClient
 import xyz.godi.popularmovies.network.TmdbService
@@ -32,7 +33,7 @@ object NetworkModule {
     fun provideRetrofit(okHttpClient: OkHttpClient): Retrofit {
         return Retrofit.Builder()
                 .client(okHttpClient)
-                .baseUrl("https://pokeapi.co/api/v2/")
+                .baseUrl("https://api.themoviedb.org/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build()
     }

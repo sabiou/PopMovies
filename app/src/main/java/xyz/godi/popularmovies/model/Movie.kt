@@ -14,9 +14,9 @@ data class Movie(
         @SerializedName("id")
         var id: Int,
         @SerializedName("poster_path")
-        var poster_path: String,
+        val poster_path: String?,
         @SerializedName("backdrop_path")
-        var backdrop_path: String,
+        val backdrop_path: String?,
         @SerializedName("original_title")
         var original_title: String,
         @SerializedName("release_date")

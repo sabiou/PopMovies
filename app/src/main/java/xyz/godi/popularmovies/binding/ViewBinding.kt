@@ -9,7 +9,7 @@ import androidx.databinding.BindingAdapter
 import androidx.lifecycle.LiveData
 import com.bumptech.glide.Glide
 import com.skydoves.whatif.whatIfNotNull
-import xyz.godi.popularmovies.utils.PostersUtils
+import xyz.godi.popularmovies.utils.MoviesUtils
 
 /**
  * Created by Farouk on 12/06/20.
@@ -41,6 +41,6 @@ fun bindOnBackPressed(view: View, finish: Boolean) {
 fun bindPosterImage(view: AppCompatImageView, url: String?) {
     val context = view.context
     Glide.with(context)
-            .load(url?.let { PostersUtils.getPosterPath(it) })
+            .load(url?.let { MoviesUtils.getPosterPath(it) })
             .into(view)
 }

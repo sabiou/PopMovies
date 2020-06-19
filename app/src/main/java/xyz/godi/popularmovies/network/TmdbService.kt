@@ -10,8 +10,8 @@ import xyz.godi.popularmovies.model.MovieResponse
  */
 interface TmdbService {
 
-    @GET("movies")
-    fun fetchMoviesList(
+    @GET("/3/discover/movie?language=en&sort_by=popularity.desc")
+    fun fetchPopularMoviesList(
             @Query("limit") limit: Int = 20,
             @Query("offset") offset: Int = 0
     ): Call<MovieResponse>

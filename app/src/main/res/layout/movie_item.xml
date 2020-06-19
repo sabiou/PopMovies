@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
         <variable
@@ -8,85 +10,48 @@
 
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:elevation="2dp"
+        android:layout_height="290dp"
         android:foreground="?attr/selectableItemBackground"
-        tools:ignore="SmallSp">
+        android:orientation="vertical"
+        tools:targetApi="m">
 
-        <include layout="@layout/guidelines_8" />
-
-        <ImageView
-            android:id="@+id/image"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:scaleType="centerCrop"
-            app:layout_constraintDimensionRatio="H,154:142"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="ContentDescription"
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/item_poster_post"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:scaleType="fitXY"
+            app:posterImage="@{movie.poster_path}"
             tools:src="@tools:sample/backgrounds/scenic" />
 
-        <View
-            android:id="@+id/scrim"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:background="@drawable/grid_scrim"
-            app:layout_constraintBottom_toBottomOf="@+id/image"
-            app:layout_constraintEnd_toEndOf="@+id/image"
-            app:layout_constraintStart_toStartOf="@+id/image"
-            app:layout_constraintTop_toTopOf="@+id/image" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            android:background="@color/colorPrimary">
 
-        <TextView
-            android:id="@+id/vote_count"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            android:drawablePadding="4dp"
-            android:gravity="center_vertical"
-            android:textColor="@color/colorWhite"
-            android:textSize="10sp"
-            app:drawableStartCompat="@drawable/ic_thumb_up_16"
-            app:drawableTint="@color/colorWhite"
-            app:layout_constraintBottom_toTopOf="@+id/guide_bottom_8"
-            app:layout_constraintRight_toRightOf="@+id/guide_right_8"
-            tools:text="@sample/vote_count" />
+            <LinearLayout
+                android:id="@+id/item_poster_palette"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:alpha="0.7"
+                android:orientation="vertical" />
 
-        <TextView
-            android:id="@+id/release_date"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:drawablePadding="4dp"
-            android:gravity="center_vertical"
-            android:textColor="@color/colorWhite"
-            android:textSize="10sp"
-            app:drawableStartCompat="@drawable/ic_date_16"
-            app:drawableTint="@color/colorWhite"
-            app:layout_constraintBottom_toTopOf="@+id/guide_bottom_8"
-            app:layout_constraintLeft_toRightOf="@+id/guide_left_8"
-            tools:text="@sample/release_dates" />
+            <TextView
+                android:id="@+id/item_poster_title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:padding="3dp"
+                android:textColor="@color/colorWhite"
+                android:textSize="14sp"
+                android:text="@{movie.original_title}"
+                android:textStyle="bold"
+                tools:text="title" />
+        </RelativeLayout>
 
-        <TextView
-            android:id="@+id/title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="4dp"
-            android:ellipsize="end"
-            android:maxLines="2"
-            android:textColor="@color/colorWhite"
-            android:textSize="14sp"
-            app:layout_constrainedWidth="true"
-            app:layout_constraintBottom_toTopOf="@+id/relative_date"
-            app:layout_constraintHorizontal_bias="0"
-            app:layout_constraintLeft_toRightOf="@+id/guide_left_8"
-            app:layout_constraintRight_toLeftOf="@+id/guide_right_8"
-            tools:text="@sample/movies_names" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </RelativeLayout>
 
 </layout>

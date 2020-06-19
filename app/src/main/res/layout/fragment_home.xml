@@ -38,7 +38,6 @@
             android:clipToPadding="false"
             android:fadeScrollbars="false"
             app:adapter="@{adapter}"
-            android:padding="6dp"
             app:adapterMovieList="@{vm.movieListLiveData}"
             app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"

@@ -40,7 +40,6 @@
         android:layout_marginEnd="161dp"
         android:layout_marginStart="161dp"
         android:layout_marginTop="30dp"
-        android:onClick="showLicenceDialog"
         android:text="@string/licences"
         android:textColor="@color/colorPrimary"
         android:visibility="visible"

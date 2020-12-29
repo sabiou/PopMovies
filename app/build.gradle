@@ -1,0 +1,137 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'androidx.navigation.safeargs.kotlin'
+    id 'dagger.hilt.android.plugin'
+}
+
+android {
+    compileSdkVersion Sdk.COMPILE_SDK_VERSION
+    defaultConfig {
+        applicationId = AppCoordinates.APP_ID
+        minSdkVersion Sdk.MIN_SDK_VERSION
+        targetSdkVersion Sdk.TARGET_SDK_VERSION
+        versionName = AppCoordinates.APP_VERSION_NAME
+
+        testInstrumentationRunner = "xyz.godi.popularmovies.AppTestRunner"
+
+        //buildConfigField("String", "API_KEY", properties["api_key"] as String)
+
+        vectorDrawables.useSupportLibrary = true
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments["room.incremental"] = "true"
+            }
+        }
+    }
+    buildTypes {
+        getByName("release") {
+            //isMinifyEnabled = true
+            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+        }
+    }
+    buildFeatures {
+        dataBinding = true
+        viewBinding = true
+    }
+
+    // Required for AR because it includes a library built with Java 8
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
+
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    // Kotlin ktx
+    implementation(LibSupport.ANDROIDX_CORE_KTX)
+    // Kotlin
+    implementation(Plugins.GRADLE_PLUGIN)
+    // UI
+    //implementation(Libs.ACTIVITY_KTX)
+    implementation(LibSupport.ANDROIDX_APPCOMPAT)
+    //implementation(Libs.FRAGMENT_KTX)
+    //implementation(Libs.CARDVIEW)
+    implementation(LibSupport.ANDROIDX_CONSTRAINT_LAYOUT)
+    implementation(LibUI.MATERIAL_COMPONENTS)
+    implementation(LibUI.INSETTERS)
+
+    // image loading
+    implementation(LibUI.COIL)
+
+    implementation(LibSupport.VECTOR_DRAWABLES)
+    implementation(LibUI.RECYCLERVIEW)
+    implementation(LibSupport.SWIPE_REFRESH)
+
+    // Android JetPack
+    implementation(LibArchitecture.NAVIGATION_FRAGMENT)
+    implementation(LibArchitecture.NAVIGATION_UI)
+    implementation(LibArchitecture.LIVE_DATA)
+    implementation(LibArchitecture.VIEW_MODEL)
+    //kapt(Libs.LIFECYCLE_COMPILER)
+    implementation(LibArchitecture.ROOM_RUNTIME)
+    implementation(LibArchitecture.ROOM_KTX)
+
+    kapt(LibArchitecture.ROOM_COMPILER)
+    //testImplementation(Libs.ARCH_TESTING)
+
+    // Dagger Hilt
+    implementation(LibDI.HILT_DAGGER)
+    implementation(LibDI.HILT_VIEW_MODEL)
+    kapt(LibDI.HILT_COMPILER)
+    kapt(LibDI.HILT_DAGGER_COMPILER)
+    kapt(LibDI.HILT_DAGGER_ANDROID_COMPILER)
+
+    // Retrofit
+    implementation(LibHttp.RETROFIT)
+    implementation(LibHttp.RETROFIT_GSON)
+
+    // Local unit tests
+    testImplementation(LibTesting.JUNIT)
+    //testImplementation(Libs.HAMCREST)
+
+    // unit tests livedata
+    //testImplementation(Libs.ARCH_TESTING)
+
+    // Sandwich
+    implementation(LibOthers.SANDWICH)
+
+    // Google Gson
+    implementation(LibHttp.GSON)
+
+    // Glide
+    //implementation(LibSupport)
+    //kapt(Libs.GLIDE_COMPILER)
+
+    // color palette
+    implementation("androidx.palette:palette-ktx:1.0.0")
+    // Licences dialog
+    implementation("de.psdev.licensesdialog:licensesdialog:2.1.0")
+
+    // adapter
+    implementation(LibOthers.BASE_RECYCLER_ADAPTER)
+
+    // transformation
+    implementation(LibOthers.TRANSFORMATION_LAYOUT)
+
+    // whatif
+    implementation(LibOthers.WHATIF)
+
+    testImplementation(LibTesting.ANDROID_CORE_TESTING)
+    testImplementation(LibTesting.COROUTINES)
+    testImplementation(LibTesting.JUNIT)
+    testImplementation(LibTesting.LIVE_DATA_TESTING)
+
+    // Instrumentation tests
+    androidTestImplementation(LibAndroidTesting.ANDROIDX_TEST_EXT_JUNIT)
+    androidTestImplementation(LibAndroidTesting.ANDROIDX_TEST_RULES)
+    androidTestImplementation(LibAndroidTesting.ESPRESSO_CORE)
+}

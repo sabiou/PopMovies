@@ -1,13 +1,11 @@
 package xyz.godi.popularmovies.model
 
-import android.os.Parcelable
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
-import kotlinx.android.parcel.Parcelize
 
 @Entity
-@Parcelize
+
 data class Movie(
         var page: Int = 0,
         @PrimaryKey
@@ -27,4 +25,4 @@ data class Movie(
         var vote_average: Double,
         @SerializedName("overview")
         var overview: String
-) : Parcelable
+)

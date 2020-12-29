@@ -2,8 +2,6 @@ package xyz.godi.popularmovies.base
 
 import androidx.lifecycle.*
 import kotlinx.coroutines.Dispatchers
-import xyz.godi.popularmovies.model.Movie
-
 /**
  * Created by Farouk on 12/06/20.
  */

@@ -7,7 +7,7 @@ import androidx.appcompat.widget.AppCompatImageView
 import androidx.core.view.isGone
 import androidx.databinding.BindingAdapter
 import androidx.lifecycle.LiveData
-import com.bumptech.glide.Glide
+import coil.load
 import com.skydoves.whatif.whatIfNotNull
 import xyz.godi.popularmovies.utils.MoviesUtils
 
@@ -39,8 +39,5 @@ fun bindOnBackPressed(view: View, finish: Boolean) {
 
 @BindingAdapter("posterImage")
 fun bindPosterImage(view: AppCompatImageView, url: String?) {
-    val context = view.context
-    Glide.with(context)
-            .load(url?.let { MoviesUtils.getPosterPath(it) })
-            .into(view)
+    view.load(url?.let { MoviesUtils.getPosterPath(it) })
 }

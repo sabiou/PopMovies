@@ -1,5 +1,1 @@
-include(
-        ":app",
-        ":depconstraints",
-        ":tests"
-)
+include(":app")

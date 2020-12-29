@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.view.View
 import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
-import xyz.godi.popularmovies.BuildConfig
 import xyz.godi.popularmovies.R
 
 /**
